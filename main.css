@@ -1,0 +1,237 @@
+/*
+    Theme Name: Funk-Gruppe-Event
+    Version: 1.0
+    Author: SchwizerDesign
+    Author URI: http://schwizerdesign.ch
+    Tags: No Tags
+*/
+
+:root {
+  --funkblue: #004C92;
+  --funkgreen: #51C519;
+  --funkblack: #333333;
+  --funkgray: #d1d1d1;
+}
+
+body {
+    margin:0px;
+    padding: 0px;
+}
+
+h1, h2, p {
+    color: var(--funkblack);
+    font-family: 'Noto Serif', serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: left;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+span {
+  display: block;
+}
+
+section {
+  width: 800px;
+  margin: 0 auto;
+}
+article{
+  margin: 50px 0;
+}
+
+.green {
+  color: var(--funkgreen);
+}
+
+/*----------------------------------
+    Accordion
+-----------------------------------*/
+
+.acctitle {
+  cursor: pointer;
+  padding: 20px 15px;
+  border-top: 1px solid var(--funkgreen);
+}
+
+.acctitle h2 {
+  display: inline-block;
+  color: var(--funkgreen);
+}
+
+.pmcontainer {
+  float: right;
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-top: 8px;
+  transition: transform .25s ease-in-out;
+}
+
+.plus, .minus {
+  position: absolute;
+  left: 10px;
+  width: 2px;
+  height: 22px;
+  background-color: var(--funkgreen);
+  vertical-align: middle;
+}
+.minus {
+  width: 22px;
+  height: 2px;
+  top: 10px;
+  left: 0px;
+}
+
+.pmrotate {
+  transform: rotate(45deg);
+  transition: transform .25s ease-in-out;
+}
+
+.acclist {
+  display: none;
+}
+.acclistc {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  padding: 20px 0px;
+  margin: 0;
+}
+
+.acclist p {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--funkgray);
+}
+.acclist span {
+  opacity: 0.5;
+}
+.acclist .noline {
+  border-bottom: none;
+}
+.gitem02 {
+  grid-column: span 2;
+}
+
+
+
+/*----------------------------------
+    Contactform
+-----------------------------------*/
+
+.containerform {
+  margin-left: 10%;
+  width: 40%;
+  float: left;
+  margin-bottom: 100px;
+}
+
+.containerform h1 {
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+.containeranmeldung {
+  margin-right: 10%;
+  width: 30%;
+  float: right;
+}
+
+.kontakt {
+  color: #223870;
+}
+
+.buttonanmeldung {
+  display: block;
+  margin: 10px 0;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 15px;
+    line-height: 1;
+    padding-left: 14px
+}
+
+.success {
+    color: #deb887;
+    text-align: left;
+    font-size: 17px;
+    padding: 10px;
+}
+
+
+#contact input,
+#contact textarea,
+#contact button {
+    font-family: 'Manrope', sans-serif;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #223870;
+    box-shadow: none;
+    margin: 15px 0 5px;
+    padding: 10px 12px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+}
+
+#contact input:hover,
+#contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+}
+
+#contact textarea {
+    height:150px;
+    max-width:100%;
+    resize:none;
+}
+
+#contact button {
+    cursor: pointer;
+    background-color: #223870;
+    color: #fff;
+    width: 50%;
+}
+
+#contact button:hover {
+    opacity: 0.75;
+    -webkit-transition:background-color 0.3s ease-in-out;
+    -moz-transition:background-color 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button:active {
+    box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline:0;
+    background-color: none;
+}
+::-webkit-input-placeholder {color:#223870;}
+:-moz-placeholder {color:#223870;}
+::-moz-placeholder {color:#223870;}
+:-ms-input-placeholder {color:#223870;}
+
+
+@media only screen and (max-width: 910px) {
+
+ 
+}
+@media only screen and (max-width: 650px) {
+
+}
+@media only screen and (max-width: 350px) {
+}

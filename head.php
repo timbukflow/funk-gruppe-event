@@ -54,9 +54,6 @@
 <meta property="business:contact_data:postal_code" content="8590">
 <meta property="business:contact_data:country_name" content="Switzerland">
 
-<meta name="google-site-verification" content="UA-142487628-7" />
-<link rel="stylesheet" href="css/reset.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
