@@ -83,7 +83,7 @@
             <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
             <fieldset>
                   <label class="form-control" for="checkbox1">
-                    <input  type="radio" id="checkbox1" name="checkbox[]" value="Option 1" <?= (is_array($checkbox) && in_array("Option 1", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil
+                    <input  type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil
                   </label>
                   <label class="form-control" for="checkbox2">
                     <input type="radio" id="checkbox2" name="checkbox[]" value="Option 2" <?= (is_array($checkbox) && in_array("Option 2", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil und mache am Töggeliturnier mit
