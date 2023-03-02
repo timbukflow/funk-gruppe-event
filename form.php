@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Bei Fehlern die bereits eingegebenen Daten beibehalten
         $vorname = $_POST["vorname"];
         $name = $_POST["name"];
-        $firma = $_POST["firma"]
+        $firma = $_POST["firma"];
         $email = $_POST["email"];
         $telefon = $_POST["telefon"];
         $mitteilung = $_POST["mitteilung"];
