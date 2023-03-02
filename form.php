@@ -1,15 +1,7 @@
 <?php
 
-session_start();
-
 $name_error = $vorname_error = $email_error = $telefon_error = $mitteilung_error = $checkbox_error = "";
 $name = $vorname = $email = $telefon = $mitteilung = $success = $checkbox = "";
-
-function csrf_token() {
-    $token = bin2hex(random_bytes(32));
-    $_SESSION["csrf_token"] = $token;
-    return $token;
-}
 
 function validateForm() {
     $errors = [];
@@ -66,10 +58,6 @@ function validateForm() {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $csrf_token = csrf_token();
-    if ($_POST["csrf_token"] !== $csrf_token) {
-        die("Ungültiges CSRF-Token");
-    }
     $errors = validateForm();
     if (empty($errors)) {
         // Speichern der Daten in der Datenbank
@@ -93,13 +81,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mitteilung_error = $errors["mitteilung"] ?? "";
         $checkbox_error = $errors["checkbox"] ?? "";
     }
-}
-
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
 }
 
 ?>

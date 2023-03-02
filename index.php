@@ -81,41 +81,40 @@
 
           <div>
           <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
-            <fieldset>
-                <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="1" autofocus>
-                <span class="error"><?= $name_error ?></span>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="2">
-                <span class="error"><?= $vorname_error ?></span>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="3" >
-                <span class="error"><?= $email_error ?></span>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="4" >
-                <span class="error"><?= $telefon_error ?></span>
-            </fieldset>
-            <fieldset>
-                <textarea placeholder="Schreiben Sie uns eine Nachricht...." name="mitteilung" tabindex="5"><?= $mitteilung ?></textarea>
-                <span class="error"><?= $mitteilung_error ?></span>
-            </fieldset>
-            <fieldset>
-                <input type="checkbox" id="checkbox1" name="checkbox[]" value="ja">
-                <label for="checkbox1">Ja</label>
-                <input type="checkbox" id="checkbox2" name="checkbox[]" value="vielleicht">
-                <label for="checkbox2">Vielleicht</label>
-                <input type="checkbox" id="checkbox3" name="checkbox[]" value="nein">
-                <label for="checkbox3">Nein</label>
-                <span class="error"><?= $checkbox_error ?></span>
-            </fieldset>
-            <fieldset>
-                <input type="hidden" name="csrf_token" value="<?= csrf_token(); ?>">
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
-            </fieldset>
-            <div class="success"><?= $success; ?></div>
-          </form>
+    <fieldset>
+        <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="1" autofocus>
+        <span class="error"><?= $name_error ?></span>
+    </fieldset>
+    <fieldset>
+        <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="2">
+        <span class="error"><?= $vorname_error ?></span>
+    </fieldset>
+    <fieldset>
+        <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="3" >
+        <span class="error"><?= $email_error ?></span>
+    </fieldset>
+    <fieldset>
+        <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="4" >
+        <span class="error"><?= $telefon_error ?></span>
+    </fieldset>
+    <fieldset>
+        <textarea placeholder="Schreiben Sie uns eine Nachricht...." name="mitteilung" tabindex="5"><?= $mitteilung ?></textarea>
+        <span class="error"><?= $mitteilung_error ?></span>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" id="checkbox1" name="checkbox[]" value="ja">
+        <label for="checkbox1">Ja</label>
+        <input type="checkbox" id="checkbox2" name="checkbox[]" value="vielleicht">
+        <label for="checkbox2">Vielleicht</label>
+        <input type="checkbox" id="checkbox3" name="checkbox[]" value="nein">
+        <label for="checkbox3">Nein</label>
+        <span class="error"><?= $checkbox_error ?></span>
+    </fieldset>
+    <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
+    </fieldset>
+    <div class="success"><?= $success; ?></div>
+</form>
          </div>
       </div>
 
