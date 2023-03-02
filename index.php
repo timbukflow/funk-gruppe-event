@@ -81,6 +81,18 @@
             <?php include('form.php'); ?>
 
             <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
+            <fieldset>
+                  <label class="form-control" for="checkbox1">
+                    <input  type="radio" id="checkbox1" name="checkbox[]" value="Option 1" <?= (is_array($checkbox) && in_array("Option 1", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil
+                  </label>
+                  <label class="form-control" for="checkbox2">
+                    <input type="radio" id="checkbox2" name="checkbox[]" value="Option 2" <?= (is_array($checkbox) && in_array("Option 2", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil und mache am Töggeliturnier mit
+                  </label>
+                  <label class="form-control" for="checkbox3">
+                    <input type="radio" id="checkbox3" name="checkbox[]" value="Option 3" <?= (is_array($checkbox) && in_array("Option 3", $checkbox)) ? "checked" : "" ?>> Leider bin ich verhindert
+                  </label>
+                  <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
+              </fieldset>
               <fieldset>
                   <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="1">
                   <span class="error"><?= isset($errors["vorname"]) ? $errors["vorname"] : $vorname_error ?></span>
@@ -100,15 +112,6 @@
               <fieldset>
                   <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="5">
                   <span class="error"><?= isset($errors["telefon"]) ? $errors["telefon"] : $telefon_error ?></span>
-              </fieldset>
-              <fieldset>
-                  <input type="checkbox" id="checkbox1" name="checkbox[]" value="Option 1" <?= (is_array($checkbox) && in_array("Option 1", $checkbox)) ? "checked" : "" ?>>
-                  <label for="checkbox1">Option 1</label>
-                  <input type="checkbox" id="checkbox2" name="checkbox[]" value="Option 2" <?= (is_array($checkbox) && in_array("Option 2", $checkbox)) ? "checked" : "" ?>>
-                  <label for="checkbox2">Option 2</label>
-                  <input type="checkbox" id="checkbox3" name="checkbox[]" value="Option 3" <?= (is_array($checkbox) && in_array("Option 3", $checkbox)) ? "checked" : "" ?>>
-                  <label for="checkbox3">Option 3</label>
-                  <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
               </fieldset>
               <fieldset>
                   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
