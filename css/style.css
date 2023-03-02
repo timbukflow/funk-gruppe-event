@@ -1,0 +1,1781 @@
+/*
+    Theme Name: STEPCUBE
+    Description: STEPCUBE
+    Version: 1.0
+    Author: Ivo Schwizer
+    Author URI: http://schwizerschlatter.com
+    Tags: No Tags
+*/
+
+/*
+    Color Theme: STEPCUBE
+    Main Color Blue: #223870;
+    Main Color Light Blue: #92AFC8;
+    Main Color Light Green: #93BDB9;
+    Main Color Light Brown: #B8A89F;
+
+    Font: Manrope
+*/
+
+body {
+    margin:0px;
+    padding: 0px;
+}
+
+.home {
+  background-color: #223870;
+}
+
+h1, h2, h3, h4, p, a, span, .accList, footer, .menudescription {
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.06em;
+    /* text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    text-decoration: none;
+}
+
+.wafont h1, .wafont span, .wafont h4, .wafont p, .wafont a {
+  color: #223870;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.15;
+  font-weight: 200;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.navcontainer a {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 0.07em;
+  line-height: 1.15;
+}
+
+.button {
+	border:1px solid #ffffff;
+	display: inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding: 6px 24px;
+  margin: 50px 0 30px 0;
+	text-decoration:none;
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.buttoncontainer {
+  display: inline-block;
+  margin: 0 20%;
+}
+
+.buttonpositiv {
+  color: #223870;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #223870;
+  margin: 0px;
+  padding: 6px 24px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.buttonpositiv:hover {
+	background-color: #223870;
+  color: #fff;
+}
+
+.button:hover {
+	color: #223870;
+  background-color: #ffffff;
+}
+
+.wohnen .button:hover {
+	color: #B8A89F;
+  background-color: #ffffff;
+}
+
+.gewerbe .button:hover {
+	color: #93BDB9;
+  background-color: #ffffff;
+}
+
+.map .button:hover {
+	color: #92AFC8;
+
+}
+
+/*----------------------------------
+    header nav
+-----------------------------------*/
+
+.logo {
+  position: absolute;
+  top: 0;
+  margin: 90px 3%;
+  z-index: 99;
+  display: inline-block;
+}
+.logo img {
+  height: auto;
+}
+
+.logo.w {
+  margin: 70px 3%;
+}
+
+.logowohnangebot {
+  position: fixed;
+  margin: 70px 3%;
+  z-index: 999;
+}
+
+.menu {
+  position: fixed;
+  cursor: pointer;
+  top: 0px;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  -webkit-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.menudescription {
+  position: fixed;
+  right: 0;
+  font-size: 17px;
+  letter-spacing: 5px;
+  top: 66px;
+  transform: rotate(-90deg);
+}
+
+.menudescription.blue {
+  color: #223870;
+}
+
+.navbutton {
+  position: fixed;
+  right: 5%;
+  top: 60px;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.40, 0, 0.10, 1);
+}
+
+.navbutton:hover {
+  transform: rotate(135deg);
+}
+
+.menufade {
+  top: 586px;
+}
+
+.navcontainer {
+  position: absolute;
+  width: 40%;
+  top: -586px;
+  right: 0;
+  background-color: #223870;
+}
+
+.navone, .navtwo, .navthree, .navfour {
+  width: 25%;
+  background-color: #223870;
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+}
+.navtwo {
+  background-color: #92AFC8;
+  left: 25%;
+}
+.navthree {
+  background-color: #93BDB9;
+  left: 50%;
+}
+.navfour {
+  background-color: #B8A89F;
+  left: 75%;
+}
+
+.navcontainer ul {
+  margin: 50px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+
+.navcontainer li {
+  padding: 15px 0;
+  position: relative;
+}
+
+.navline li::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    -webkit-transition: .25s ease-in-out ;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.navline li:hover::after{
+    width: 100%;
+    -webkit-transition: .25s ease-in-out ;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+/*----------------------------------
+  projekt
+-----------------------------------*/
+.maincontainer {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.startimgone {
+  width: 95%;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 5%;
+  float: left;
+}
+
+.startimgtwo {
+  width: 90%;
+  position: relative;
+  margin: 50px 0 100px;
+  float: left;
+}
+
+.start .header {
+  font-size: 50px;
+  width: 40%;
+  margin-right: 20%;
+  right: 0;
+  z-index: 10;
+  position: absolute;
+  top: 110px;
+  hyphens: none;
+  -webkit-hyphens: none;
+   -moz-hyphens: none;
+}
+
+.start .holder {
+  position: relative;
+  display: inline-block;
+}
+
+.start h2, .start p{
+  display: inline-block;
+  margin: 100px 20% 0 20%;
+}
+
+.start .second {
+  width: 40%;
+  float: left;
+  margin: 150px 0 0 10%;
+}
+
+.romanshorn .color {
+  background-color: #92AFC8;
+}
+
+.wohnen h2, .wohnen p,
+.gewerbe h2, .gewerbe p,
+.map h2, .map p {
+  color: #ffffff;
+  width: 60%;
+  display: inline-block;
+  margin: 0px 20% 0;
+}
+
+.start p,
+.wohnen p,
+.gewerbe p,
+.map p {
+  margin-top: 25px;
+}
+
+.buttoncontainer p {
+  width: 100%;
+  margin: 25px 0 0 0;
+}
+
+.wohnen {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  background-color: #B8A89F;
+  margin-top: 200px;
+  padding-bottom: 150px;
+}
+
+.wohnenimg {
+  width: 80%;
+  float: left;
+  margin-right: 20%;
+  position: relative;
+  top: -50px;
+  transition: all 0.5s ease-in;
+}
+
+.wohnenimgone {
+  width: 80%;
+  margin-top: 100px;
+  float: right;
+  position: relative;
+}
+
+.wcontainer {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.wohnenimgtwo {
+  width: 40%;
+  float: left;
+  position: relative;
+}
+
+.wohnenimgthree{
+  width: 50%;
+  float: right;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.wohnen .header {
+  color: #ffffff;
+  width: 50%;
+  margin: 0 10% 0 40%;
+  z-index: 10;
+  top: -117px;
+  float: right;
+  position: relative;
+}
+
+.wohnen .header.two {
+  top: -67px;
+  margin-bottom: 60px;
+}
+
+.gewerbe {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  background-color: #93BDB9;
+  padding-bottom: 150px;
+}
+
+.gewerbeimg {
+  width: 80%;
+  margin-left: 20%;
+  position: relative;
+  top: -50px;
+  transition: all 0.5s ease-in;
+}
+
+.gewerbe .header {
+  color: #ffffff;
+  width: 60%;
+  margin: 0 0 0 40%;
+  z-index: 10;
+  top: -117px;
+  position: relative;
+}
+
+/* Day & Night Button */
+
+.daynightcontainer {
+  position: relative;
+  margin-left: 10%;
+  top: -150px;
+}
+
+.day, .night {
+  border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding: 6px 24px;
+  margin: 0;
+  float: left;
+	text-decoration:none;
+}
+
+.day {
+  border-right: 0px;
+}
+
+.nightimg {
+  position: absolute;
+  right: 0px;
+}
+
+.dayfade {
+  opacity: 0%;
+  transition: all 0.5s ease-in;
+}
+
+.nightbutton {
+  color: #B8A89F;
+  background-color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+.daybutton {
+  color: #B8A89F;
+  background-color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  background-color: #92AFC8;
+  padding-bottom: 150px;
+}
+
+.mapimg {
+  width: 90%;
+  margin-right: 10%;
+  position: relative;
+  top: -50px;
+  transition: all 0.5s ease-in;
+}
+
+.inputs {
+  position: relative;
+  width: 30%;
+  opacity: 0.6;
+  margin: 30px 10%;
+  top:0;
+}
+
+.start .inputs {
+  float: right;
+  margin: 80px 10%;
+}
+
+.wohnen .inputs {
+  position: relative;
+  float: right;
+  margin-bottom: 0;
+}
+
+.wcontainer .inputs {
+  margin-top: 60px;
+  float: left;
+}
+
+.gewerbe .inputs {
+  position: relative;
+  float: right;
+  margin-bottom: 0;
+}
+
+.inputs.map {
+  position: relative;
+  float: right;
+  margin: 30px 10% 0 0;
+  padding: 0;
+}
+
+.inputs h3 {
+  margin: 0 30px;
+}
+
+.inputs span {
+  font-size: 32px;
+  opacity: 0.4;
+  display: block;
+
+}
+
+/*----------------------------------
+    romanshorn
+-----------------------------------*/
+
+.distanzcontainer {
+  margin: 0 10%;
+  width: 80%;
+  float: left;
+}
+
+.distanz {
+  width: 25%;
+  float: left;
+}
+
+.distanz p {
+  border-bottom: 1px solid #92AFC8;
+  padding-bottom: 5px;
+  margin: 0;
+  margin-top: 10px;
+  width: 90%;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.distanz span {
+  float: right;
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+.distanz p:first-child {
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+.map {
+  margin-top: 150px;
+}
+
+.map .color {
+  background-color: #92AFC8;
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  top: -80px;
+  height: 25px;
+}
+
+/*----------------------------------
+    cont0r 2g
+-----------------------------------*/
+
+.cb {
+  height: 100vh;
+  width: 40%;
+  margin: 0px 0px;
+  position: fixed;
+  display: inline-block;
+}
+
+#bulding {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    bottom: 175px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.st0{ fill:#fff;stroke:#1D3A6C;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:10;}
+.st1{ fill:none;stroke:#1D3A6C;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:10;}
+.st3{ fill:#fff;stroke:#1D3A6C;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:10;}
+.st4{ fill:#fff;stroke:#1D3A6C;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:10 5;}
+
+g, tr, polygon {
+    transition: all 0.3s ease-in-out;
+}
+
+.activ {
+    fill: #1D3A6C;
+    background-color: rgba(22,38,70, 0.25);
+    -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.activug {
+    background-color: rgba(22,38,70, 0.25);
+    -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.up {
+    opacity: 0.5;
+    -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform:  translate(-20px, -180px);
+    -moz-transform:     translate(-20px, -180px);
+    -o-transform:       translate(-20px, -180px);
+    -ms-transform:      translate(-20px, -180px);
+    transform:          translate(-20px, -180px);
+}
+.down {
+    opacity: 0.5;
+    -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform:  translate(0, 20px);
+    -moz-transform:     translate(0, 20px);
+    -o-transform:       translate(0, 20px);
+    -ms-transform:      translate(0, 20px);
+    transform:          translate(0, 20px);
+}
+
+.reservation {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 0 60px 60px;
+}
+
+.reservation p {
+    margin: 0 0 15px 10px;
+}
+
+/*----------------------------------
+    container table
+-----------------------------------*/
+
+.ct {
+    width: 60%;
+    position: relative;
+    float: right;
+    padding-top: 60px;
+    display: inline-block;
+    background-color: #fafafa;
+}
+
+.ct h4 {
+    margin: 0 5% 0% 5%;
+    padding-left: 10px;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.ct h4 span {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.ct .bresp {
+    margin-right: 6%;
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+table {
+    width: 90%;
+    margin: 3% 5%;
+    border: none;
+}
+
+table, th, td, td a {
+    font-family: 'Manrope', sans-serif;
+    color: #223870;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 0.06em;
+    border-collapse: collapse;
+    line-height: 1.5;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+    vertical-align: top;
+}
+
+th, td {
+    padding: 7px 0px 5px 10px;
+    text-align: left;
+    border-bottom: 1px solid #BEC7BE;
+    border-right: 1px dashed #BEC7BE;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+td:nth-child(7) {
+  font-weight: 500;
+}
+
+
+
+td a:hover {
+    opacity: 1;
+}
+
+.reserv {
+  font-size: 12px;
+}
+
+.downloadplan {
+    padding-top: 20px;
+}
+
+th:last-child, td:last-child {border-right: none;}
+
+.planb {cursor: pointer;}
+.plani {margin: 3px; opacity: 0.5;}
+.plani:hover {opacity: 1;}
+
+.plan {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height:  100vh;
+    background-color: #fafafa;
+    cursor: pointer;
+    z-index: 10;
+}
+.plan img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 60%;
+    max-width: 60%;
+}
+.plan a {
+    position: absolute;
+    bottom: 0;
+    margin: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.plan .linkbaubeschreibung {
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    margin: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.plan a img {
+    position: relative;
+}
+
+.planhover {
+    display: block;
+}
+.r td {
+    opacity: 0.5;
+}
+.v td {
+    color: rgba(22,38,70, 0.5);
+}
+.v td:last-child {
+    font-style: normal;
+    color: #718166;
+}
+.data {
+    text-align: left;
+    font-size: 14px;
+    border: none;
+    padding-top: 30px;
+}
+
+.plan img.norden {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    top: auto;
+    right: 0;
+    margin: 50px;
+    height: 60px;
+}
+
+/*----------------------------------
+    contact form
+-----------------------------------*/
+
+.containerform {
+  margin-left: 10%;
+  width: 40%;
+  float: left;
+  margin-bottom: 100px;
+}
+
+.containerform h1 {
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+.containeranmeldung {
+  margin-right: 10%;
+  width: 30%;
+  float: right;
+}
+
+.kontakt {
+  color: #223870;
+}
+
+.buttonanmeldung {
+  display: block;
+  margin: 10px 0;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 15px;
+    line-height: 1;
+    padding-left: 14px
+}
+
+.success {
+    color: #deb887;
+    text-align: left;
+    font-size: 17px;
+    padding: 10px;
+}
+
+
+#contact input,
+#contact textarea,
+#contact button {
+    font-family: 'Manrope', sans-serif;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #223870;
+    box-shadow: none;
+    margin: 15px 0 5px;
+    padding: 10px 12px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+}
+
+#contact input:hover,
+#contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+}
+
+#contact textarea {
+    height:150px;
+    max-width:100%;
+    resize:none;
+}
+
+#contact button {
+    cursor: pointer;
+    background-color: #223870;
+    color: #fff;
+    width: 50%;
+}
+
+#contact button:hover {
+    opacity: 0.75;
+    -webkit-transition:background-color 0.3s ease-in-out;
+    -moz-transition:background-color 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button:active {
+    box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline:0;
+    background-color: none;
+}
+::-webkit-input-placeholder {color:#223870;}
+:-moz-placeholder {color:#223870;}
+::-moz-placeholder {color:#223870;}
+:-ms-input-placeholder {color:#223870;}
+
+/*----------------------------------
+    accordion
+-----------------------------------*/
+.baubeschreibung, .kontaktcontainer {
+  margin-top: 250px;
+  margin-bottom: 60px;
+}
+
+.header.bau {
+  padding-left: 10px;
+  position: relative;
+  margin: 0px 10% 80px 10%;
+}
+
+.accordioncontainer {
+  display: inline-block;
+  width: 100%;
+}
+
+.accordioncontainer h2 {
+  margin-left: 10%;
+  padding: 15px;
+  width: 80%;
+}
+
+.accordion {
+  box-sizing: border-box;
+  margin-left: 10%;
+  padding: 0 10px;
+  width: 40%;
+  float: left;
+  position: relative;
+  margin-bottom: 160px;
+  cursor: pointer;
+}
+
+.accordion.right {
+  margin-left: 0;
+  margin-right: 10%;
+}
+
+.accordion h3 {
+  font-size: 22px;
+  margin: 0;
+  padding: 15px 5px;
+  border-bottom: 1px solid #223870;
+  color: #223870;
+  vertical-align: middle;
+}
+
+.accordion.highlights h3 {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.accordion ul {
+  padding: 0;
+}
+
+.accordion li {
+  border-bottom: 1px solid rgba(22,38,70, 0.25);
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+  color: #223870;
+  margin: 0;
+}
+
+.accordion.highlights li {
+  border-bottom: none;
+  color: #fff;
+}
+
+.accordion img {
+  float: right;
+  width: 20px;
+  margin-top: 5px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.accX {
+  transform: rotate(45deg);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.accList {
+    display: none;
+}
+
+/*----------------------------------
+    footer
+-----------------------------------*/
+
+footer {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    background-color: #223870;
+    width: 100%;
+
+}
+
+.footerholder {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+footer a,
+.footermid a,
+.footermid li {
+    color: #fff !important;
+    margin: 0;
+}
+
+.footerleft h2,
+.footerleft p,
+#impressum p {
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  line-height: 1.55;
+}
+
+.colorfooter {
+  width: 50%;
+  height: 50px;
+  background-color: #223870;
+  position: relative;
+  top: -50px;
+}
+
+.footerleft {
+  float: left;
+  margin-left: 10%;
+  width: 40%;
+}
+
+.footermid {
+  float: left;
+  width: 25%;
+  display: inline-block;
+}
+
+.footermid ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5px;
+}
+
+.footermid li {
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.impressum {
+    color: #fff !important;
+    margin: 0;
+    cursor: pointer;
+}
+
+.footermid li a:hover,
+.footermid li p:hover,
+.footerleft a:hover,
+#impressum a:hover,
+span.disclaimer:hover,
+span.konditionen:hover {
+  font-weight: 600;
+}
+
+.footerright {
+  width: 25%;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+}
+
+.footerright img {
+  margin-top: 30px;
+  width: 50%;
+}
+
+#impressum {
+    display: none;
+    margin-left: 10%;
+    padding-bottom: 50px;
+}
+
+.disclaimer {
+    font-size: 15px;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.konditionen {
+    font-size: 14px;
+    color: #223870 !important;
+}
+
+#datenschutz {
+    display: none;
+    padding-bottom: 50px;
+    margin: 0 10%;
+    position: relative;
+}
+
+#datenschutz p{
+    font-size: 14px;
+    line-height: 1.75;
+    color: #fff;
+}
+
+#konditionen {
+    display: none;
+    padding: 0px 10px;
+    margin: 0 5% 20px;
+    position: relative;
+    float: left;
+}
+
+#optoutbanner99 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+	background-color: #fff;
+	z-index: 200;
+}
+
+#optoutbanner99 a,
+#optoutbanner99 p{
+	cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  color: #223870;
+  margin: 0 15px;
+  padding: 15px 0px;
+}
+#optoutbanner99 a {
+  margin: 0;
+  padding: 15px 15px;
+}
+
+#acceptga {
+	text-decoration: none !important;
+	background-color: #92AFC8;
+	color: #fff !important;
+}
+
+
+/*----------------------------------
+responsive
+-----------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  /*--home--*/
+  h2, p, a {
+    font-size: 20px;
+  }
+  .start .header {
+    font-size: 42px;
+  }
+  .navcontainer a {
+    font-size: 32px;
+  }
+  .navcontainer {
+    top: -506px;
+  }
+  .navcontainer ul {
+    margin-bottom: 80px;
+  }
+  .menufade {
+    top: 506px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .wohnen .header,
+  .gewerbe .header {
+    top: -107px;
+  }
+  .wohnen .header.two {
+    top: -57px;
+  }
+  /*--romanshorn--*/
+  .romanshorn .header {
+    font-size: 52px;
+  }
+  /*--wohnen--*/
+  .reservation {
+    margin: 0 0 30px 30px;
+  }
+  #bulding {
+    bottom: 165px;
+  }
+  .ct h4,
+  .ct h4 span {
+    font-size: 35px;
+  }
+  table, th, td, td a {
+    font-size: 16px;
+  }
+  th {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  /*--home--*/
+  .start .header {
+    font-size: 35px;
+    width: 50%;
+    margin-right: 10%;
+    top: 140px;
+  }
+  .startimgone {
+    width: 115%;
+  }
+  .navcontainer a {
+    font-size: 32px;
+  }
+  .navcontainer {
+    width: 60%;
+  }
+  .navbutton {
+    right: 7%;
+  }
+  .inputs {
+    margin: 20px 10%;
+  }
+  .inputs span {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .start h2, .start p {
+  margin: 100px 15% 0 15% ;
+  }
+  .start p, .wohnen p, .gewerbe p, .map p {
+  margin-top: 25px;
+  }
+  .wohnen h2, .wohnen p, .gewerbe h2, .gewerbe p, .map h2, .map p {
+  margin: 0 15% 0;
+  }
+  .buttoncontainer {
+    margin: 0 15%;
+  }
+  .buttoncontainer p {
+    margin: 25px 0 0 0;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .wohnen .header,
+  .gewerbe .header {
+    top: -97px;
+  }
+  .wohnen .header {
+    margin-bottom: 50px;
+  }
+  .wohnen .header.two {
+    top: -47px;
+  }
+  /*--romanshorn--*/
+  .romanshorn .header {
+    font-size: 52px;
+  }
+  .distanzcontainer {
+    margin: 0 0 0 5%;
+    width: 95%;
+  }
+  .distanz {
+    width: 50%;
+  }
+  .distanz p {
+    margin: 10px 0 0 0;
+  }
+  .distanz p:first-child {
+    margin-top: 35px;
+  }
+  /*--wohnen--*/
+
+  .ct h4,
+  .ct h4 span {
+    font-size: 30px;
+  }
+  table, th, td, td a {
+    font-size: 15px;
+  }
+  th {
+      font-size: 12px;
+  }
+
+  /*--baubeschreibung--*/
+  .accordion h3 {
+    font-size: 20px;
+  }
+  .accordion li {
+    font-size: 17px;
+    letter-spacing: 0.05em;
+  }
+  .accordion img {
+    width: 15px;
+    margin-top: 0px;
+  }
+  .accordioncontainer h2 {
+    margin-left: 10%;
+  }
+
+  /*--footer--*/
+  footer a, .footermid a, .footermid li {
+    line-height: 1.33;
+  }
+  .footerright img {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (max-width: 910px) {
+
+  /*--home--*/
+  h2, p, a {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  .start .header {
+    font-size: 50px;
+    width: 70%;
+    margin: 0 15% 0 15%;
+    top: -47px;
+    display: inline-block;
+    position: relative;
+  }
+  .startimgone {
+    width: 115%;
+  }
+  .navbutton {
+    right: 70px;
+  }
+  .inputs {
+    width: 40%;
+  }
+  .start .inputs {
+    margin: 60px 10%;
+  }
+  .start h2, .start p {
+  margin: 50px 15% 0 15% ;
+  }
+  .buttoncontainer p {
+    margin: 25px 0 0 0;
+  }
+  .wohnen .header,
+  .gewerbe .header {
+    width: 70%;
+    margin: 0 15%;
+    top: -92px;
+  }
+  .wohnen .header.two {
+    top: -42px;
+  }
+  .daynightcontainer {
+    margin-left: 15%;
+    top: -65px;
+  }
+  .wohnenimgthree {
+    margin-bottom: 0;
+  }
+  .wcontainer .inputs {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  /*--romanshorn--*/
+  .distanz p {
+    margin: 10px 0 0 0;
+  }
+
+  /*--wohnen--*/
+  .logowohnangebot {
+    position: relative;
+    z-index:9;
+    margin-bottom: 0;
+  }
+  .cb {
+  display: none;
+  }
+  .ct {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 0px;
+  }
+  .ct h4,
+  .ct h4 span {
+    padding-top: 115px;
+  }
+  .ct .bresp {
+    display: block;
+  }
+
+  /*--baubeschreibung--*/
+  .header.bau {
+    margin-bottom: 50px;
+  }
+  .accordion {
+    width: 80%;
+    margin-bottom: 0;
+  }
+  .accordion.right {
+    margin-left: 10%;
+    margin-bottom: 100px;
+  }
+  .accordioncontainer h2 {
+    padding: 0 0 15px 0;
+  }
+  .accordion.highlights {
+    margin-left: 15%;
+    padding: 0 0px;
+    width: 70%;
+  }
+  .accordion.highlights h3 {
+    padding-left: 0px;
+  }
+
+  .containerform,
+  .containeranmeldung {
+    width: 80%;
+    margin-bottom: 60px;
+  }
+
+  /*--footer--*/
+  footer a, .footermid a, .footermid li {
+    line-height: 1.33;
+  }
+
+  .footerright {
+    width: 80%;
+    position: relative;
+    margin: 0 10%;
+    display: inline-block;
+  }
+  .footerright img{
+    width: 30%;
+    margin-right: 20%;
+    margin-top: 50px;
+    float: left;
+  }
+  .footermid,
+  .footerright img:last-child {
+    margin-left: 50px;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  /*--nav--*/
+  .logo {
+    margin: 70px 10px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .navbutton {
+    right: 18px;
+    top: 112px;
+  }
+  .navbutton img {
+    width: 20px;
+  }
+  .menudescription {
+    font-size: 15px;
+    font-weight: 500;
+    right: -5px;
+  }
+  .navcontainer {
+    width: 100%;
+    top: -415px;
+  }
+  .navcontainer li {
+    padding: 10px 0;
+    margin: 0;
+  }
+  .menufade {
+    top: 415px;
+  }
+  .navcontainer a {
+    font-size: 27px;
+  }
+  .navone, .navtwo, .navthree, .navfour {
+    height: 30px;
+  }
+  /*--home--*/
+  h2, p, a {
+    font-size: 17px;
+  }
+  .startimgone {
+    margin-left: 20px;
+    width: 130%;
+  }
+  .start .header {
+    font-size: 35px;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    top: -35px;
+    line-height: 1.25;
+  }
+  .wohnen h2, .wohnen p, .gewerbe h2, .gewerbe p, .map h2, .map p {
+    margin: 0 10% 0;
+  }
+  .wohnen h2 {
+    width: 80%;
+  }
+  .start h2, .start p {
+  margin: 25px 10% 0 10% ;
+  }
+  .buttoncontainer p {
+    margin: 25px 0 0 0;
+  }
+  .inputs {
+    width: 70%;
+  }
+  .wcontainer .inputs {
+    margin-top: 40px;
+    float: right;
+  }
+  .startimgtwo {
+    margin: 0 0 50px;
+  }
+  .buttoncontainer {
+    margin: 0 10%;
+  }
+  .wohnen {
+    margin-top: 100px;
+  }
+  .wohnenimg {
+    width: 90%;
+    margin-right: 10%;
+  }
+  .wohnenimgone {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .wohnenimgtwo,
+  .wohnenimgthree {
+    width: 90%;
+  }
+  .wohnenimgthree {
+    margin-top: 40px;
+  }
+  .wohnen .header,
+  .gewerbe .header{
+    width: 80%;
+    margin: 0 10%;
+    font-size: 35px;
+    top: -83px;
+  }
+  .wohnen .header.two {
+    top: -33px;
+    margin-bottom: 40px;
+  }
+  .daynightcontainer {
+    margin-left: 10%;
+    top: -55px;
+  }
+  .gewerbe {
+    padding-bottom: 100px;
+  }
+  .gewerbeimg {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .gewerbe .header {
+    margin: 0 0 0 20%;
+  }
+  /*--romanshorn--*/
+  .distanzcontainer {
+    margin: 0 5% 0 5%;
+    width: 90%;
+  }
+  .distanz {
+    width: 100%;
+  }
+  .distanz p {
+    margin: 10px 0 0 0;
+  }
+  .map {
+    margin-top: 125px;
+    padding-bottom: 100px;
+  }
+  .mapimg {
+    height: 500px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .map .color {
+    width: 100%;
+  }
+  .inputs.map {
+    margin: 25px 10% 50px 0;
+  }
+  .map h2 {
+    width: 80%;
+  }
+
+  /*--wohnen--*/
+  .logowohnangebot img {
+    width: 200px;
+  }
+  .ct {
+    margin-top: 30px;
+  }
+  .ct h4,
+  .ct h4 span {
+    font-size: 23px;
+    padding-top: 32px;
+    line-height: 1.3;
+  }
+  .ct h4 span {
+    display: block;
+  }
+  .ct .bresp {
+    width: 120px;
+  }
+  .tableresp {
+    width: 100%;
+    overflow-x:auto
+  }
+  table {
+    width: 100%;
+  }
+  table, th, td, td a {
+    font-size: 14px;
+  }
+  th {
+      font-size: 10px;
+  }
+  .plan a {
+    font-size: 14px;
+    margin: 30px;
+    bottom: 30px;
+  }
+  .plan img.norden {
+    right: auto;
+    bottom: auto;
+    margin: 30px;
+    margin-top: 50px;
+  }
+  /*--baubeschreibung--*/
+  .baubeschreibung, .kontaktcontainer {
+    margin-top: 210px;
+  }
+  .header.bau {
+    font-size: 35px;
+    margin: 0px 7% 40px 7%;
+  }
+  .accordion h3 {
+    font-size: 17px;
+  }
+  .accordion,
+  .accordion.right {
+    margin-left: 7%;
+    margin-right: 7%;
+    width: 86%;
+  }
+  .accordion.highlights {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+
+  #optoutbanner99 {
+    width: 100%;
+    text-align: left;
+  }
+  #optoutbanner99 a,
+  #optoutbanner99 p{
+    font-size: 12px;
+  }
+  #acceptga {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+
+
+  /*--footer--*/
+  .colorfooter {
+    width: 75%;
+    height: 35px;
+    top: -35px;
+  }
+  .footerleft,
+  .footermid {
+    width: 80%;
+  }
+  .footermid,
+  .footerright {
+    margin-left: 10%;
+    margin-top: 50px;
+  }
+  .footerright img {
+    width: 50%;
+    margin-top: 0;
+  }
+  .footerright img:last-child {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  #impressum {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .navcontainer a {
+    font-size: 24px;
+  }
+  .navcontainer {
+    width: 100%;
+    top: -405px;
+  }
+  .menufade {
+    top: 405px;
+  }
+  .logo img {
+    width: 180px;
+  }
+  .start .header {
+    font-size: 30px;
+    top: -30px;
+  }
+  h2, p, a {
+    font-size: 16px;
+  }
+  .wohnen .header,
+  .gewerbe .header{
+    width: 80%;
+    margin: 0 10%;
+    font-size: 30px;
+    top: -78px;
+  }
+  .wohnen .header.two {
+    top: -28px;
+    margin-bottom: 40px;
+  }
+}
+
+/*----------------------------------
+aenderungsvorbehalt
+-----------------------------------*/
+
+.aenderungsvorbehalt img {
+  margin-bottom: 0px;
+}
+
+.aenderungsvorbehalt p {
+  margin: 20px;
+  margin-bottom: 100px;
+  font-size: 14px;
+  width: 85%;
+}
