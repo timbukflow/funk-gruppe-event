@@ -9,7 +9,7 @@
 :root {
   --funkblue: #004C92;
   --funkgreen: #51C519;
-  --funkblack: #333333;
+  --funkblack: #515151;
   --funkgray: #d1d1d1;
 }
 
@@ -18,8 +18,22 @@ body {
     padding: 0px;
 }
 
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(img/funk-background.svg) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.grill img {
+  height: 70vh;
+  left: 40%;
+  position: absolute;
+  bottom: 0;
+}
+
 h1, h2, p,
-input, textarea, button {
+input, textarea, button, label {
     color: var(--funkblack);
     font-family: 'Noto Serif', serif;
     font-weight: normal;
@@ -189,7 +203,7 @@ textarea {
 
 button {
     cursor: pointer;
-    background-color: #223870;
+    background-color: var(--funkgreen);
     color: #fff;
     width: 50%;
 }

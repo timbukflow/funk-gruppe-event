@@ -11,9 +11,8 @@
 
 <body>
     <header>
-        <h1>
-        Funk-Grill-Plausch Versichereranlass mit Fussball-Special
-        </h1>
+        <h1>Funk-Grill-Plausch Versichereranlass mit Fussball-Special</h1>
+        <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
     </header>
     <section>
       <article>
@@ -86,10 +85,10 @@
                     <input  type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil
                   </label>
                   <label class="form-control" for="checkbox2">
-                    <input type="radio" id="checkbox2" name="checkbox[]" value="Option 2" <?= (is_array($checkbox) && in_array("Option 2", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil und mache am Töggeliturnier mit
+                    <input type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil und mache am Töggeliturnier mit
                   </label>
                   <label class="form-control" for="checkbox3">
-                    <input type="radio" id="checkbox3" name="checkbox[]" value="Option 3" <?= (is_array($checkbox) && in_array("Option 3", $checkbox)) ? "checked" : "" ?>> Leider bin ich verhindert
+                    <input type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" <?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>> Leider bin ich verhindert
                   </label>
                   <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
               </fieldset>
