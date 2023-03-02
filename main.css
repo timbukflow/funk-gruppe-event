@@ -18,7 +18,8 @@ body {
     padding: 0px;
 }
 
-h1, h2, p {
+h1, h2, p,
+input, textarea, button {
     color: var(--funkblack);
     font-family: 'Noto Serif', serif;
     font-weight: normal;
@@ -45,7 +46,7 @@ section {
   margin: 0 auto;
 }
 article{
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 
 .green {
@@ -128,60 +129,45 @@ article{
 -----------------------------------*/
 
 .containerform {
-  margin-left: 10%;
-  width: 40%;
-  float: left;
-  margin-bottom: 100px;
+  border-top: 1px solid var(--funkgreen);
+  padding: 20px 15px;
 }
 
-.containerform h1 {
-  margin-top: 0;
-  padding-left: 10px;
+.containerform h2 {
+  color: var(--funkgreen);
+  display: inline-block;
+  
 }
-
-.containeranmeldung {
-  margin-right: 10%;
-  width: 30%;
+.containerform p {
   float: right;
+  padding-top: 14px;
+  font-size: 18px;
 }
 
-.kontakt {
-  color: #223870;
+.containerform form {
+  margin: 40px 0 ;
 }
 
-.buttonanmeldung {
-  display: block;
-  margin: 10px 0;
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
-
-.error {
-    color: #ff0000;
-    font-size: 15px;
-    line-height: 1;
-    padding-left: 14px
-}
-
-.success {
-    color: #deb887;
-    text-align: left;
-    font-size: 17px;
-    padding: 10px;
-}
-
 
 #contact input,
 #contact textarea,
 #contact button {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     border-radius: 0;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid #223870;
+    border: none;
     box-shadow: none;
-    margin: 15px 0 5px;
-    padding: 10px 12px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
+    border-radius: 5px;
+    background-color: #EFF4F8;
+    margin: 10px 0 ;
+    padding: 20px 20px;
+    font-size: 20px;
 }
 
 #contact input:hover,
@@ -220,10 +206,25 @@ article{
     outline:0;
     background-color: none;
 }
-::-webkit-input-placeholder {color:#223870;}
-:-moz-placeholder {color:#223870;}
-::-moz-placeholder {color:#223870;}
-:-ms-input-placeholder {color:#223870;}
+::-webkit-input-placeholder {color:#8499AD;}
+:-moz-placeholder {color:#8499AD;}
+::-moz-placeholder {color:#8499AD;}
+:-ms-input-placeholder {color:#8499AD;}
+
+
+.error {
+  color: #ff0000;
+  font-size: 15px;
+  line-height: 1;
+  padding-left: 14px
+}
+
+.success {
+  color: #deb887;
+  text-align: left;
+  font-size: 17px;
+  padding: 10px;
+}
 
 
 @media only screen and (max-width: 910px) {

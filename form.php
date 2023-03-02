@@ -1,10 +1,19 @@
 <?php
 
-$name_error = $vorname_error = $email_error = $telefon_error = $mitteilung_error = $checkbox_error = "";
-$name = $vorname = $email = $telefon = $mitteilung = $success = $checkbox = "";
+$vorname_error = $name_error = $firma = $email_error = $telefon_error = $checkbox_error = "";
+$vorname = $name = $firma_error = $email = $telefon = $success = $checkbox = "";
 
 function validateForm() {
     $errors = [];
+
+    if (empty($_POST["vorname"])) {
+        $errors["vorname"] = "Vorname ist erforderlich";
+    } else {
+        $vorname = filter_var($_POST["vorname"], FILTER_SANITIZE_STRING);
+        if (empty($vorname)) {
+            $errors["vorname"] = "Es sind nur Buchstaben erlaubt";
+        }
+    }
 
     if (empty($_POST["name"])) {
         $errors["name"] = "Name ist erforderlich";
@@ -15,12 +24,12 @@ function validateForm() {
         }
     }
 
-    if (empty($_POST["vorname"])) {
-        $errors["vorname"] = "Vorname ist erforderlich";
+    if (empty($_POST["firma"])) {
+        $errors["firma"] = "Firma ist erforderlich";
     } else {
-        $vorname = filter_var($_POST["vorname"], FILTER_SANITIZE_STRING);
-        if (empty($vorname)) {
-            $errors["vorname"] = "Es sind nur Buchstaben erlaubt";
+        $firma = filter_var($_POST["firma"], FILTER_SANITIZE_STRING);
+        if (empty($firma)) {
+            $errors["firma"] = "Es sind nur Buchstaben erlaubt";
         }
     }
 
@@ -42,12 +51,6 @@ function validateForm() {
         }
     }
 
-    if (empty($_POST["mitteilung"])) {
-        $errors["mitteilung"] = "Bitte schreiben Sie uns eine Nachricht";
-    } else {
-        $mitteilung = filter_var($_POST["mitteilung"], FILTER_SANITIZE_STRING);
-    }
-
     if (empty($_POST["checkbox"])) {
         $errors["checkbox"] = "Bitte wählen Sie mindestens eine Option aus";
     } else {
@@ -66,20 +69,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach($_POST as $key => $value){
             $message_body .= "$key: $value\n";
         }
-        $headers = "From:anfrage@stepcube.ch";
-        $to = "janine.schmuckli@sur.ag";
-        $subject = "Stepcube Anfrage";
+        $headers = "From:anmeldung@funk-gruppe-event.ch";
+        $to = "ivoschwizer@gmail.com";
+        $subject = "Anmeldung-Funk-Grill-Plausch";
         if (mail($to, $subject, $message_body, $headers)){
             $success = "Ihre Anfrage wurde erfolgreich gesendet.";
-            $name = $vorname = $email = $telefon = $mitteilung = "";
+            $vorname = $name = $firma = $email = $telefon = "";
         }
     } else {
-        $name_error = $errors["name"] ?? "";
-        $vorname_error = $errors["vorname"] ?? "";
-        $email_error = $errors["email"] ?? "";
-        $telefon_error = $errors["telefon"] ?? "";
-        $mitteilung_error = $errors["mitteilung"] ?? "";
-        $checkbox_error = $errors["checkbox"] ?? "";
+        // Bei Fehlern die bereits eingegebenen Daten beibehalten
+        $vorname = $_POST["vorname"];
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $telefon = $_POST["telefon"];
+        $mitteilung = $_POST["mitteilung"];
+        $checkbox = isset($_POST["checkbox"]) ? $_POST["checkbox"] : "";
     }
 }
 

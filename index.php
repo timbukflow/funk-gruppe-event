@@ -31,6 +31,7 @@
           </span>
         </p>
       </article>
+
       <article>
         <div class="acctitle">
           <h2>Programm</h2>
@@ -73,54 +74,55 @@
             </div>
           </div>
         </div>
+      </article>
+      <div class="containerform">
+            <h2>Anmeldung</h2>
+            <p>Anmeldeschluss ist der 31. März 2023.</p>
+            <?php include('form.php'); ?>
 
-        <div class="containerform">
-          <h2>Anmeldung</h2>
-          <p class="small">Anmeldeschluss ist der 31. März 2023.</p>
-          <?php include('form.php'); ?>
-
-          <div>
-          <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
-    <fieldset>
-        <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="1" autofocus>
-        <span class="error"><?= $name_error ?></span>
-    </fieldset>
-    <fieldset>
-        <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="2">
-        <span class="error"><?= $vorname_error ?></span>
-    </fieldset>
-    <fieldset>
-        <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="3" >
-        <span class="error"><?= $email_error ?></span>
-    </fieldset>
-    <fieldset>
-        <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="4" >
-        <span class="error"><?= $telefon_error ?></span>
-    </fieldset>
-    <fieldset>
-        <textarea placeholder="Schreiben Sie uns eine Nachricht...." name="mitteilung" tabindex="5"><?= $mitteilung ?></textarea>
-        <span class="error"><?= $mitteilung_error ?></span>
-    </fieldset>
-    <fieldset>
-        <input type="checkbox" id="checkbox1" name="checkbox[]" value="ja">
-        <label for="checkbox1">Ja</label>
-        <input type="checkbox" id="checkbox2" name="checkbox[]" value="vielleicht">
-        <label for="checkbox2">Vielleicht</label>
-        <input type="checkbox" id="checkbox3" name="checkbox[]" value="nein">
-        <label for="checkbox3">Nein</label>
-        <span class="error"><?= $checkbox_error ?></span>
-    </fieldset>
-    <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
-    </fieldset>
-    <div class="success"><?= $success; ?></div>
-</form>
-         </div>
+            <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
+              <fieldset>
+                  <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="1">
+                  <span class="error"><?= isset($errors["vorname"]) ? $errors["vorname"] : $vorname_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="2" autofocus>
+                  <span class="error"><?= isset($errors["name"]) ? $errors["name"] : $name_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <input placeholder="Firma&#42;" type="text" name="firma" value="<?= $firma ?>" tabindex="3" autofocus>
+                  <span class="error"><?= isset($errors["firma"]) ? $errors["firma"] : $firma_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="4">
+                  <span class="error"><?= isset($errors["email"]) ? $errors["email"] : $email_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="5">
+                  <span class="error"><?= isset($errors["telefon"]) ? $errors["telefon"] : $telefon_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <input type="checkbox" id="checkbox1" name="checkbox[]" value="Option 1" <?= (is_array($checkbox) && in_array("Option 1", $checkbox)) ? "checked" : "" ?>>
+                  <label for="checkbox1">Option 1</label>
+                  <input type="checkbox" id="checkbox2" name="checkbox[]" value="Option 2" <?= (is_array($checkbox) && in_array("Option 2", $checkbox)) ? "checked" : "" ?>>
+                  <label for="checkbox2">Option 2</label>
+                  <input type="checkbox" id="checkbox3" name="checkbox[]" value="Option 3" <?= (is_array($checkbox) && in_array("Option 3", $checkbox)) ? "checked" : "" ?>>
+                  <label for="checkbox3">Option 3</label>
+                  <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
+              </fieldset>
+              <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
+              </fieldset>
+              <div class="success"><?= $success; ?></div>
+            </form>
       </div>
 
+        
+      
 
 
-      </article>
+
+      
     </section>
 
     
