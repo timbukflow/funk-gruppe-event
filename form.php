@@ -67,6 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message_body = "";
         unset($_POST["submit"]);
         foreach($_POST as $key => $value){
+            if (is_array($value)) {
+                $value = implode(", ", $value); // konvertieren des Array-Werts in einen String
+            }
             $message_body .= "$key: $value\n";
         }
         $headers = "From:anmeldung@funk-gruppe-event.ch";
