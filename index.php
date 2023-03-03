@@ -119,7 +119,7 @@
                   <span class="error"><?= isset($errors["email"]) ? $errors["email"] : $email_error ?></span>
               </fieldset>
               <fieldset>
-                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="6"><?= isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "" ?></textarea>
+                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="5"><?= isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "" ?></textarea>
                 <span class="error"><?= isset($errors["mitteilung"]) ? $errors["mitteilung"] : "" ?></span>
               </fieldset>
               <fieldset>
