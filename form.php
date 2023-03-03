@@ -72,8 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = "Anmeldung-Funk-Grill-Plausch";
         if (mail($to, $subject, $message_body, $headers)){
             $success = "Ihre Anfrage wurde erfolgreich gesendet.";
-            $vorname = $name = $firma = $email = $checkbox = "";
-            $mitteilung = "";
+            $vorname = $name = $firma = $email = $checkbox = $mitteilung = "";
         }
     } else {
         // Bei Fehlern die bereits eingegebenen Daten beibehalten
