@@ -283,13 +283,13 @@ input:focus {
 .checkbox {
   margin-bottom: 25px;
 }
-.radio {
-  /* width: 15px; */
-  font-size: 15px;
-  /* margin-right: 10px; */
-  margin: 0;
-  display: block;
+ input.radio {
+  /* appearance: none; */
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
 }
+
 
 .error {
   color: #ff0000;
