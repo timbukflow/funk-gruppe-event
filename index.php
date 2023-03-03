@@ -11,18 +11,24 @@
 
 <body>
     <header>
-        <h1>Funk-Grill-Plausch Versichereranlass mit Fussball-Special</h1>
-        <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
+        <div class="asheader"><h3>Anmeldeschluss ist der 31. März 2023.</h3> </div>
+        <div class="event-title">
+          <h1 >Funk-Grill-Plausch <span>Versichereranlass mit Fussball-Special</span></h1>
+          <h2>Donnerstag 22. Juni 2023</span></h2>
+          <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button>
+          <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
+          <div class="funk-logo"><img src="./img/funk-logo.svg" alt="funk-logo"></div>
+        </div>
     </header>
     <section>
-      <article>
+      <article class="intro">
         <h1>Geschätzte Geschäftspartner</h1>
         <p>
           <span>
-            Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich ein, zusammen mit uns einen gemütlichen Grillabend zu verbringen. Freuen Sie sich auch dieses Jahr auf unser packendes Fussball-Special!
+            Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich ein, zusammen mit uns einen gemütlichen Grillabend zu verbringen. Freuen Sie sich auch dieses Jahr auf unser packendes Fussball-Special! 
           </span>
           <span>
-            Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre Anmeldung über das Anmeldeformular auf der letzten Seite.
+            Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre Anmeldung über das Anmeldeformular auf der letzten Seite. 
           </span>
           <span>
             Herzliche Grüsse <br>
@@ -66,15 +72,16 @@
               <p>zu Fuss</p>
               <p>ab Bahnhof Oerlikon Fussweg ca. 10 Minuten</p>
               <p>mit ÖV</p>
-              <p>ab Bahnhof Oerlikon mit Bus Nr 781 bis Haltestelle «Hagenholz» oder Tram 11 bis Haltestelle «Leutschenbach » und kurzer Fussweg</p>
+              <p>ab Bahnhof Oerlikon mit Bus Nr 781 bis Haltestelle &laquo;Hagenholz&raquo; oder Tram 11 bis Haltestelle &laquo;Leutschenbach&raquo; und kurzer Fussweg</p>
               <p>mit PW</p>
-              <p>folgen Sie dem Zeichen «Messe Zürich» und parkieren Sie im Parkhaus Messe Zürich AG</p>
-              <p class="noline gitem02">Kontaktperson bei Fragen: karin.deutsch@funk-gruppe.ch</p>
+              <p>folgen Sie dem Zeichen &laquo;Messe Zürich&raquo; und parkieren Sie im Parkhaus Messe Zürich AG</p>
+              <p class="noline gitem02">Kontaktperson bei Fragen:</p>
+              <a class="gitem02" href="mailto:karin.deutsch@funk-gruppe.ch" target="_top">karin.deutsch@funk-gruppe.ch</a>
             </div>
           </div>
         </div>
       </article>
-      <div class="containerform">
+      <div id="anmeldung" class="containerform">
             <h2>Anmeldung</h2>
             <p>Anmeldeschluss ist der 31. März 2023.</p>
             <?php include('form.php'); ?>
@@ -113,21 +120,14 @@
                   <span class="error"><?= isset($errors["telefon"]) ? $errors["telefon"] : $telefon_error ?></span>
               </fieldset>
               <fieldset>
-                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Anfrage senden</button>
               </fieldset>
               <div class="success"><?= $success; ?></div>
             </form>
-      </div>
-
-        
-      
-
-
-
-      
+      </div> 
     </section>
 
-    
+    <?php require_once 'footer.php'; ?>
     <?php require_once 'script.php'; ?>
 </body>
 </html>
