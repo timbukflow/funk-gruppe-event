@@ -83,7 +83,7 @@
       </article>
       <div id="anmeldung" class="containerform">
             <h2>Anmeldung</h2>
-            <p>Anmeldeschluss ist der 31. März 2023.</p>
+            <p>Anmeldeschluss ist der 31. März 2023. <br> Die Teilnehmerzahl ist beschränkt. Die Anmeldungen werden nach Eingang berücksichtigt.</p>
             <?php include('form.php'); ?>
 
             <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
@@ -119,8 +119,8 @@
                   <span class="error"><?= isset($errors["email"]) ? $errors["email"] : $email_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Telefon&#42;" type="text" name="telefon" value="<?= $telefon ?>" tabindex="5">
-                  <span class="error"><?= isset($errors["telefon"]) ? $errors["telefon"] : $telefon_error ?></span>
+                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="6"><?= isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "" ?></textarea>
+                <span class="error"><?= isset($errors["mitteilung"]) ? $errors["mitteilung"] : "" ?></span>
               </fieldset>
               <fieldset>
                   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Anfrage senden</button>

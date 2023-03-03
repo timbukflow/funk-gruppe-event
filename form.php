@@ -1,7 +1,7 @@
 <?php
 
-$vorname_error = $name_error = $firma = $email_error = $telefon_error = $checkbox_error = "";
-$vorname = $name = $firma_error = $email = $telefon = $success = $checkbox = "";
+$vorname_error = $name_error = $firma = $email_error = $mitteilung_error = $checkbox_error = "";
+$vorname = $name = $firma_error = $email = $mitteilung = $success = $checkbox = "";
 
 function validateForm() {
     $errors = [];
@@ -42,13 +42,8 @@ function validateForm() {
         }
     }
 
-    if (empty($_POST["telefon"])) {
-        $errors["telefon"] = "Telefon ist erforderlich";
-    } else {
-        $telefon = filter_var($_POST["telefon"], FILTER_SANITIZE_STRING);
-        if (!preg_match("/^\d{3}\s?\d{3}\s?\d{2}\s?\d{2}$/", $telefon)) {
-            $errors["telefon"] = "Diese Telefonnummer ist nicht korrekt";
-        }
+    if (!empty($_POST["mitteilung"])) {
+        $mitteilung = filter_var($_POST["mitteilung"], FILTER_SANITIZE_STRING);
     }
 
     if (empty($_POST["checkbox"])) {
@@ -73,11 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message_body .= "$key: $value\n";
         }
         $headers = "From:anmeldung@funk-gruppe-event.ch";
-        $to = "versichereranlass@funk-gruppe.ch";
+        $to = "ivoschwizer@gmail.ch";
         $subject = "Anmeldung-Funk-Grill-Plausch";
         if (mail($to, $subject, $message_body, $headers)){
             $success = "Ihre Anfrage wurde erfolgreich gesendet.";
-            $vorname = $name = $firma = $email = $telefon = $checkbox = "";
+            $vorname = $name = $firma = $email = $mitteilung = $checkbox = "";
         }
     } else {
         // Bei Fehlern die bereits eingegebenen Daten beibehalten
@@ -85,7 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
         $firma = $_POST["firma"];
         $email = $_POST["email"];
-        $telefon = $_POST["telefon"];
         $mitteilung = $_POST["mitteilung"];
         $checkbox = isset($_POST["checkbox"]) ? $_POST["checkbox"] : "";
     }

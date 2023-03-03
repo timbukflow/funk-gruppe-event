@@ -211,6 +211,7 @@ header {
   display: inline-block;
   font-size: 18px;
   opacity: 0.5;
+  padding-top: 15px;
 }
 
 .containerform form {
@@ -223,12 +224,12 @@ fieldset {
   border: none;
 }
 
-input, button, a {
+input, button, textarea, a {
     font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
 }
 
-input, button {
+input, button, textarea {
   box-sizing: border-box;
   width: 100%;
   border: none;
@@ -272,7 +273,13 @@ button:hover {
 }
 
 input:focus {
-    outline:0;
+    outline:1;
+    outline-color: #005092;
+    background-color: none;
+}
+textarea:focus {
+    outline:1;
+    outline-color: #005092;
     background-color: none;
 }
 ::-webkit-input-placeholder {color:#8499AD;}
