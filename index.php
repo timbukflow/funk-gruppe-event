@@ -87,17 +87,20 @@
             <?php include('form.php'); ?>
 
             <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
-            <fieldset>
-                  <label class="form-control" for="checkbox1">
-                    <input  type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil
-                  </label>
-                  <label class="form-control" for="checkbox2">
-                    <input type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>> Ja, ich nehme gerne teil und mache am Töggeliturnier mit
-                  </label>
-                  <label class="form-control" for="checkbox3">
-                    <input type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" <?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>> Leider bin ich verhindert
-                  </label>
-                  <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
+              <fieldset class="checkbox">
+                <div>
+                    <input class="radio" type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>>
+                    <label for="checkbox1">Ja, ich nehme gerne teil</label>
+                </div>
+                <div>
+                  <input class="radio" type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>>
+                  <label for="checkbox2">Ja, ich nehme gerne teil und mache am Töggeliturnier mit</label>
+                </div>
+                <div>
+                  <input class="radio" type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" <?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>>
+                  <label for="checkbox3">Leider bin ich verhindert</label>
+                </div>
+                <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
               </fieldset>
               <fieldset>
                   <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="1">

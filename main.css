@@ -70,6 +70,7 @@ header {
   height: 100vh;
   background: url(img/funk-background.svg) no-repeat center center fixed; 
   background-size: cover;
+  position: relative;
 }
 
 .asheader {
@@ -280,14 +281,12 @@ input:focus {
 ::-moz-placeholder {color:#8499AD;}
 :-ms-input-placeholder {color:#8499AD;}
 
-.form-control {
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 15px;
-  cursor: pointer;
+.checkbox {
+  margin-bottom: 25px;
 }
-.form-control input {
-  margin: 5px;
+.radio {
+  width: auto;
+  margin-right: 10px;
 }
 
 .error {
