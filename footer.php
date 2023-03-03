@@ -1,5 +1,4 @@
 <footer>
-    
     <div class="footer02">
         <div>
             <p>
@@ -15,6 +14,5 @@
     </div>
     <div class="footer01">
         <h1>Die beste Empfehlung. Funk.</h1>
-    </div>
-    
+    </div> 
 </footer>
