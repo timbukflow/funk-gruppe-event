@@ -284,9 +284,8 @@ input:focus {
   margin-bottom: 25px;
 }
  input.radio {
-  appearance: none;
-  width: 16px;
-  height: 16px;
+  padding: 10px;
+  width: auto;
   margin-right: 5px;
 }
 
