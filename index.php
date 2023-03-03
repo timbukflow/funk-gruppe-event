@@ -105,15 +105,15 @@
                 <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="4">
+                  <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="4" autofocus>
                   <span class="error"><?= isset($errors["vorname"]) ? $errors["vorname"] : $vorname_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="5" autofocus>
+                  <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="5">
                   <span class="error"><?= isset($errors["name"]) ? $errors["name"] : $name_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Firma&#42;" type="text" name="firma" value="<?= $firma ?>" tabindex="6" autofocus>
+                  <input placeholder="Firma&#42;" type="text" name="firma" value="<?= $firma ?>" tabindex="6">
                   <span class="error"><?= isset($errors["firma"]) ? $errors["firma"] : $firma_error ?></span>
               </fieldset>
               <fieldset>
