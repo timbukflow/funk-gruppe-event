@@ -283,12 +283,12 @@ input:focus {
 .checkbox {
   margin-bottom: 25px;
 }
+
  input.radio {
   padding: 10px;
   width: auto;
   margin-right: 5px;
 }
-
 
 .error {
   color: #ff0000;

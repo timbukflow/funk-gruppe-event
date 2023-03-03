@@ -46,8 +46,8 @@ function validateForm() {
         $errors["telefon"] = "Telefon ist erforderlich";
     } else {
         $telefon = filter_var($_POST["telefon"], FILTER_SANITIZE_STRING);
-        if (!preg_match("/(\d{3})\s(\d{3})\s(\d{2})\s(\d{2})/", $telefon)) {
-            $errors["telefon"] = "Telefonnummer mit folgenden Abständen eintragen 071 000 00 00";
+        if (!preg_match("/^\d{3}\s?\d{3}\s?\d{2}\s?\d{2}$/", $telefon)) {
+            $errors["telefon"] = "Diese Telefonnummer ist nicht korrekt";
         }
     }
 
