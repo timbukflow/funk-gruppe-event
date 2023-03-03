@@ -94,7 +94,7 @@
                 </div>
                 <div>
                   <input class="radio" type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>>
-                  <label for="checkbox2">Ja, ich </label>
+                  <label for="checkbox2">Ja, ich nehme gerne teil und mache am Töggeliturnier mit</label>
                 </div>
                 <div>
                   <input class="radio" type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" <?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>>
