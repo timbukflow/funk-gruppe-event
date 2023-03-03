@@ -13,7 +13,7 @@
     <header>
         <div class="asheader"><h3>Anmeldeschluss ist der 31. März 2023.</h3> </div>
         <div class="event-title">
-          <h1 >Funk-Grill-Plausch <span>Versichereranlass mit Fussball-Special</span></h1>
+          <h1 >Funk Grill-Plausch <span>Versichereranlass mit Fussball-Special</span></h1>
           <h2>Donnerstag 22. Juni 2023</span></h2>
           <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button>
           <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
@@ -28,7 +28,7 @@
             Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich ein, zusammen mit uns einen gemütlichen Grillabend zu verbringen. Freuen Sie sich auch dieses Jahr auf unser packendes Fussball-Special! 
           </span>
           <span>
-            Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre Anmeldung über das Anmeldeformular auf der letzten Seite. 
+            Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre An- oder Abmeldung über das untenstehende Formular. 
           </span>
           <span>
             Herzliche Grüsse <br>
@@ -54,8 +54,10 @@
               <p>Grill-Plausch<span>be/at / Terrasse</span></p>
               <p>19.00 Uhr</p>
               <p>Start Töggeliturnier<span>Agora</span></p>
-              <p class="noline">21.15 Uhr</p>
-              <p class="noline">Ende Töggeliturnier und Rangverkündung<span>be/at</span></p>
+              <p>21.15 Uhr</p>
+              <p>Ende Töggeliturnier und Rangverkündung<span>be/at</span></p>
+              <p class="noline">Bis 23.00 Uhr</p>
+              <p class="noline">gemütlicher Ausklang</p>
             </div>
           </div>
         </div>
@@ -86,46 +88,46 @@
             <p>Anmeldeschluss ist der 31. März 2023. <br> Die Teilnehmerzahl ist beschränkt. Die Anmeldungen werden nach Eingang berücksichtigt.</p>
             <?php include('form.php'); ?>
 
-            <form id="contact" action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
+            <form id="contact" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" novalidate>
               <fieldset class="checkbox">
                 <div>
-                    <input class="radio" type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>>
+                    <input class="radio" type="radio" id="checkbox1" name="checkbox[]" value="Ja, ich nehme gerne teil" tabindex="1" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil", $checkbox)) ? "checked" : "" ?>>
                     <label for="checkbox1">Ja, ich nehme gerne teil</label>
                 </div>
                 <div>
-                  <input class="radio" type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>>
+                  <input class="radio" type="radio" id="checkbox2" name="checkbox[]" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" tabindex="2" <?= (is_array($checkbox) && in_array("Ja, ich nehme gerne teil und mache am Töggeliturnier mit", $checkbox)) ? "checked" : "" ?>>
                   <label for="checkbox2">Ja, ich nehme gerne teil und mache am Töggeliturnier mit</label>
                 </div>
                 <div>
-                  <input class="radio" type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" <?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>>
+                  <input class="radio" type="radio" id="checkbox3" name="checkbox[]" value="Leider bin ich verhindert" tabindex="3"<?= (is_array($checkbox) && in_array("Leider bin ich verhindert", $checkbox)) ? "checked" : "" ?>>
                   <label for="checkbox3">Leider bin ich verhindert</label>
                 </div>
                 <span class="error"><?= isset($errors["checkbox"]) ? $errors["checkbox"] : $checkbox_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="1">
+                  <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= $vorname ?>" tabindex="4">
                   <span class="error"><?= isset($errors["vorname"]) ? $errors["vorname"] : $vorname_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="2" autofocus>
+                  <input placeholder="Name&#42;" type="text" name="name" value="<?= $name ?>" tabindex="5" autofocus>
                   <span class="error"><?= isset($errors["name"]) ? $errors["name"] : $name_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Firma&#42;" type="text" name="firma" value="<?= $firma ?>" tabindex="3" autofocus>
+                  <input placeholder="Firma&#42;" type="text" name="firma" value="<?= $firma ?>" tabindex="6" autofocus>
                   <span class="error"><?= isset($errors["firma"]) ? $errors["firma"] : $firma_error ?></span>
               </fieldset>
               <fieldset>
-                  <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="4">
+                  <input placeholder="Email&#42;" type="text" name="email" value="<?= $email ?>" tabindex="7">
                   <span class="error"><?= isset($errors["email"]) ? $errors["email"] : $email_error ?></span>
               </fieldset>
               <fieldset>
-                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="5"><?= isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "" ?></textarea>
-                <span class="error"><?= isset($errors["mitteilung"]) ? $errors["mitteilung"] : "" ?></span>
+                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="8" rows="5"><?= isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "" ?></textarea>
+                <span class="error"><?= isset($errors["mitteilung"]) ? $errors["mitteilung"] : $mitteilung_error ?></span>
               </fieldset>
               <fieldset>
                   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Anfrage senden</button>
               </fieldset>
-              <div class="success"><?= $success; ?></div>
+              <div class="success"><?= $success; ?></div>    
             </form>
       </div> 
     </section>
