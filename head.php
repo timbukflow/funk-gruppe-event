@@ -37,6 +37,9 @@
 <meta property="business:contact_data:postal_code" content="8050">
 <meta property="business:contact_data:country_name" content="Switzerland">
 
+<link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+<link rel="icon" type="image/png" href="./img/favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
