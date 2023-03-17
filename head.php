@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Funk-Gruppe-Event">
 <meta property="og:type" content="Website">
 <meta property="og:description" content="Funk-Grill-Plausch Versichereranlass mit Fussball-Special">
-<meta property="og:url" content="https://funk-gruppe-event.ch/">
-<meta property="og:image" content="https://funk-gruppe-event.ch/img/share.jpg">
-<meta property="og:image:secure_url" content="https://funk-gruppe-event.ch/img/share.jpg">
+<meta property="og:url" content="https://funk-grill-plausch.funk-gruppe-event.ch/">
+<meta property="og:image" content="https://funk-grill-plausch.funk-gruppe-event.ch/img/share.jpg">
+<meta property="og:image:secure_url" content="https://funk-grill-plausch.funk-gruppe-event.ch/img/share.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Funk-Gruppe-Event">
 <meta name="twitter:description" content="Funk-Grill-Plausch Versichereranlass mit Fussball-Special">
-<meta name="twitter:image" content="https://stepcube.ch/img/share.jpg">
+<meta name="twitter:image" content="https://funk-grill-plausch.funk-gruppe-event.ch/share.jpg">
 <meta name="twitter:image:alt" content="Funk-Gruppe-Event | Funk-Grill-Plausch Versichereranlass mit Fussball-Special">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
