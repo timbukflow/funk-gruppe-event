@@ -335,6 +335,7 @@ footer p {
 footer  {
   position: relative;
   margin-top: 100px;
+  padding-top: 50px;
   }
 footer div {
 display: inline-block;
