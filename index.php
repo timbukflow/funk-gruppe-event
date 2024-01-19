@@ -14,7 +14,7 @@
         <!-- <div class="asheader"><h3>Anmeldeschluss ist der 31. März 2023.</h3> </div> -->
         <div class="event-title">
           <h1 >Funk Grill-Plausch <span>Versichereranlass mit Fussball-Special</span></h1>
-          <h2>Unser nächstes Event ist für 2025 geplant. Detaillierte Informationen dazu erhalten Sie zu gegebener Zeit.</span></h2>
+          <h2>Unser nächster Event ist für 2025 geplant. Detaillierte Informationen erhalten Sie zu gegebener Zeit.</span></h2>
           <!-- <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button> -->
           <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
           <div class="funk-logo"><img src="./img/funk-logo.svg" alt="funk-logo"></div>
