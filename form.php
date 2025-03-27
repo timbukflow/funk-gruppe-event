@@ -63,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($errors)) {
         // Teilnahme-Ausgabe vereinfachen (optional)
         if ($teilnahme == "Ja, ich nehme gerne teil") {
-            $teilnahme_kurz = "Ja";
+            $teilnahme_kurz = "Ja ohne Töggeliturnier";
         } elseif ($teilnahme == "Ja, ich nehme gerne teil und mache am Töggeliturnier mit") {
-            $teilnahme_kurz = "Ja + Töggeliturnier";
+            $teilnahme_kurz = "Ja mit Töggeliturnier";
         } elseif ($teilnahme == "Leider bin ich verhindert") {
             $teilnahme_kurz = "Nein";
         } else {
