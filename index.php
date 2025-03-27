@@ -14,10 +14,10 @@ Version 2.0 - 27.03.2025
     <title>Funk Gruppe Event - Einladung zum Grillabend</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta name="description" content="Funk Versichereranlass 2025 - Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
     <meta name="keywords" content="Funk Gruppe Event, Einladung zum Grillabend">
     <meta name="author" content="Funk Insurance Brokers AG">
-    <link rel="canonical" href="https://funk-gruppe-event.ch/" />
+    <link rel="canonical" href="https://versichereranlass2025.funk-gruppe-event.ch/" />
 
     <meta name="robots" content="index, follow" /> 
     <meta http-equiv="cache-control" content="public, max-age=3600" />
@@ -31,16 +31,16 @@ Version 2.0 - 27.03.2025
     <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:title" content="Funk Gruppe - Einladung zum Grillabend">
-    <meta property="og:description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta property="og:description" content="Funk Versichereranlass 2025 - Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://funk-gruppe-event.ch">
-    <meta property="og:image" content="https://funk-gruppe-event.ch/img/og-image.jpg">
+    <meta property="og:url" content="https://versichereranlass2025.funk-gruppe-event.ch/">
+    <meta property="og:image" content="https://versichereranlass2025.funk-gruppe-event.ch/img/og-image.jpg">
     <meta property="og:locale" content="de_CH">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Funk Gruppe - Einladung zum Grillabend">
-    <meta name="twitter:description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
-    <meta name="twitter:image" content="https://funk-gruppe-event.ch/img/twitter-image.jpg">
+    <meta name="twitter:description" content="Funk Versichereranlass 2025 - Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta name="twitter:image" content="https://versichereranlass2025.funk-gruppe-event.ch/img/twitter-image.jpg">
 
     <meta name="format-detection" content="telephone=yes">
     <meta property="business:contact_data:street_address" content="Hagenholzstrasse 56">
