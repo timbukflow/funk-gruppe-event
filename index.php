@@ -23,8 +23,12 @@ Version 2.0 - 27.03.2025
     <meta http-equiv="cache-control" content="public, max-age=3600" />
     <meta http-equiv="pragma" content="cache" />
 
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Funk Gruppe" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:title" content="Funk Gruppe - Einladung zum Grillabend">
     <meta property="og:description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
