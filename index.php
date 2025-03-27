@@ -209,12 +209,18 @@ Version 2.0 - 27.03.2025
       function showPopup() {
           document.getElementById('popup').style.display = 'block';
       }
-          document.getElementById('closePopup').addEventListener('click', function() {
+
+      document.getElementById('closePopup').addEventListener('click', function() {
           document.getElementById('popup').style.display = 'none';
       });
 
       <?php if (isset($success)) { ?>
-          showPopup();
+        window.location.hash = '#anmeldung';
+        showPopup();
+      <?php } ?>
+
+      <?php if (!empty($errors)) { ?>
+        window.location.hash = '#anmeldung';
       <?php } ?>
     </script>
 
