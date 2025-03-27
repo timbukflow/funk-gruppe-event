@@ -1,3 +1,9 @@
+/* 
+  Titel: Funk Gruppe Event
+  Version: 3.0
+  Autor: Ivo Schwizer - Schwizer Design GmbH
+*/
+
 :root {
   --funkblue: #005092;
   --funkgreen: #6fbf55;
@@ -13,7 +19,7 @@ body {
 h1, h2, h3, p, input, textarea, button, label {
     color: var(--funkblack);
     font-family: 'Noto Serif', serif;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 30px;
     line-height: 1.4;
     text-align: left;
@@ -35,6 +41,7 @@ h3 {
 p, .error, .success {
   font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
 }
 
 span {
@@ -117,11 +124,13 @@ header {
 /*----------------------------------
     Accordion
 -----------------------------------*/
-
-.acctitle {
-  cursor: pointer;
+.acccont {
   padding: 20px 15px;
   border-top: 1px solid var(--funkgreen);
+}
+
+.acctitle  {
+  cursor: pointer;
 }
 
 .acctitle h2 {
@@ -195,14 +204,12 @@ header {
 
 .containerform h2 {
   color: var(--funkgreen);
-  display: inline-block;
   padding-right: 10px;
   
 }
 .containerform p {
   display: inline-block;
   font-size: 18px;
-  opacity: 0.5;
   padding-top: 15px;
 }
 
@@ -219,6 +226,7 @@ fieldset {
 input, button, textarea, a {
     font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
+    font-weight: 300;
 }
 
 input, button, textarea {
@@ -237,6 +245,7 @@ label {
   margin: 15px 0 ;
   padding: 0px;
   font-size: 20px;
+  font-weight: 300;
 }
 
 input:hover {
@@ -302,14 +311,38 @@ textarea:focus {
   padding: 10px;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--funkgreen);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.popup h1, .popup p {
+  color: white;
+}
+#closePopup {
+  background-color: white ;
+  color: var(--funkgreen);
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
 .homebutton {
   position: absolute;
-  background-color: transparent;
+  left: 5%;
   bottom: 50px;
+  margin: 15px;
   display: inline-block;
-  border: 2px solid white;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px 20px;
   z-index: 2;
 }
 .homebutton a {
@@ -323,8 +356,8 @@ textarea:focus {
 -----------------------------------*/
 footer h1, footer p, footer a {
   font-family: 'Noto Serif', serif;
-  font-size: 20px;
-  color: var(--funkblack);
+  font-size: 16px;
+  color: white;
   text-decoration: none;
   display: block;
   padding: 0;
@@ -333,24 +366,24 @@ footer p {
   padding-right: 50px;
 }
 footer  {
-  position: relative;
-  margin-top: 100px;
-  padding-top: 50px;
+    background: var(--funkblue);
+    display: flex;
+    margin-top: 0px;
+    padding:30px;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-end;
   }
-footer div {
-display: inline-block;
-}
-.footer01 {
-  position: absolute; 
-  bottom: 20px;
-  left: 20px;
-}
-.footer02 {
-  position: absolute; 
-  bottom: 20px;
-  right: 20px;
-}
 
+.footer02 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+}
+.footer-logo {
+  width: 100px;
+}
 /*----------------------------------
     Mobile
 -----------------------------------*/
@@ -373,5 +406,9 @@ display: inline-block;
   .gitem02 {grid-column: span 2; padding-bottom: 0px !important;}
   .noline {padding-bottom: 0;}
   .footer01, .footer02 {position: relative; left: auto; right: auto; bottom: auto; padding-top: 15px;}
-  footer {padding: 20px; margin: 5%;}
+  .popup {left: 8%; transform: translate(-4%, -50%);}
+}
+
+@media only screen and (max-width: 600px) {
+  footer {gap: 10px;align-items: flex-start;flex-direction: column; margin-top: 10px;}
 }

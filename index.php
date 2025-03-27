@@ -1,34 +1,81 @@
+<!-- 
+
+Made by Schwizer Design GmbH
+Say hello @ schwizerdesign.ch
+Version 2.0 - 27.03.2025
+
+-->
+
 <!DOCTYPE html>
 <html lang="de">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# place: http://ogp.me/ns/place#">
+  
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funk Gruppe Event - Einladung zum Grillabend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta name="keywords" content="Funk Gruppe Event, Einladung zum Grillabend">
+    <meta name="author" content="Funk Insurance Brokers AG">
+    <link rel="canonical" href="https://funk-gruppe-event.ch/" />
+
+    <meta name="robots" content="index, follow" /> 
+    <meta http-equiv="cache-control" content="public, max-age=3600" />
+    <meta http-equiv="pragma" content="cache" />
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+    <meta property="og:title" content="Funk Gruppe - Einladung zum Grillabend">
+    <meta property="og:description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funk-gruppe-event.ch">
+    <meta property="og:image" content="https://funk-gruppe-event.ch/img/og-image.jpg">
+    <meta property="og:locale" content="de_CH">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Funk Gruppe - Einladung zum Grillabend">
+    <meta name="twitter:description" content="Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten Fussball-Special!">
+    <meta name="twitter:image" content="https://funk-gruppe-event.ch/img/twitter-image.jpg">
+
+    <meta name="format-detection" content="telephone=yes">
+    <meta property="business:contact_data:street_address" content="Hagenholzstrasse 56">
+    <meta property="business:contact_data:locality" content="Zürich"> 
+    <meta property="business:contact_data:region" content="8050">
+    <meta property="business:contact_data:postal_code" content="8050">
+    <meta property="business:contact_data:country_name" content="Switzerland">
+    
     <link rel="stylesheet" href="main.css" />
-    <?php require_once 'head.php'; ?>
-    <meta name="description" content="Funk-Grill-Plausch Versichereranlass mit Fussball-Special">
-    <title>Funk Gruppe Event</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <header>
-        <!-- <div class="asheader"><h3>Anmeldeschluss ist der 31. März 2023.</h3> </div> -->
+        <div class="asheader"><h3>Anmeldeschluss ist der 12. Mai 2025.</h3> </div>
         <div class="event-title">
-          <h1 >Funk Grill-Plausch <span>Versichereranlass mit Fussball-Special</span></h1>
-          <h2>Unser nächster Event ist für 2025 geplant. Detaillierte Informationen erhalten Sie zu gegebener Zeit.</span></h2>
-          <!-- <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button> -->
+          <h1>Einladung zum Grillabend mit Töggeliturnier</span></h1>
+          <h2>Gemeinsam geniessen & mitfiebern!</span></h2>
+          <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button>
           <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
           <div class="funk-logo"><img src="./img/funk-logo.svg" alt="funk-logo"></div>
         </div>
     </header>
-    <!-- <section>
+    <section>
       <article class="intro">
         <h1>Geschätzte Geschäftspartner</h1>
         <p>
           <span>
-            Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich ein, zusammen mit uns einen gemütlichen Grillabend zu verbringen. Freuen Sie sich auch dieses Jahr auf unser packendes Fussball-Special! 
+            Als Dankeschön für unsere erfolgreiche Zusammenarbeit laden wir Sie herzlich zu einem entspannten Grillabend ein. Geniessen Sie mit uns kulinarische Köstlichkeiten vom Grill, gute Gespräche und spannende Fussballmomente bei unserem beliebten <strong>Fussball-Special!</strong>
           </span>
           <span>
-            Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre An- oder Abmeldung über das untenstehende Formular. 
+            📅 Datum: 12. Juni 2025 <br>
+            📍 Ort: Funk Zürich, Hagenholzstrasse 56, 8050 Zürich 
+          </span>
+          <span>
+          Wir freuen uns, Sie an diesem Anlass zu begrüssen und erwarten gerne Ihre Anmeldung über das Anmeldeformular. Die Plätze sind begrenzt und werden nach Eingang berücksichtigt. 
           </span>
           <span>
             Herzliche Grüsse <br>
@@ -38,34 +85,38 @@
       </article>
 
       <article>
-        <div class="acctitle">
-          <h2>Programm</h2>
-          <div class="pmcontainer">
-            <div class="plus"></div>
-            <div class="minus"></div>
+        <div class="acccont">
+          <div class="acctitle">
+            <h2>Programm</h2>
+            <div class="pmcontainer">
+              <div class="plus"></div>
+              <div class="minus"></div>
+            </div>
           </div>
           <div class="acclist">
             <div class="acclistc">
               <p>17.00 Uhr</p>
-              <p>Eintreffen der Gäste <span>be/at</span></p>
+              <p>Eintreffen der Gäste und Apéro</p>
               <p>17.45 Uhr</p>
-              <p>Begrüssung<span>be/at</span></p>
+              <p>Begrüssung</p>
               <p>18.00 Uhr</p>
-              <p>Grill-Plausch<span>be/at / Terrasse</span></p>
-              <p>19.00 Uhr</p>
-              <p>Start Töggeliturnier<span>Agora</span></p>
+              <p>Grill-Plausch</p>
+              <p>19.15 Uhr</p>
+              <p>Start Töggeliturnier</p>
               <p>21.15 Uhr</p>
-              <p>Ende Töggeliturnier und Rangverkündung<span>be/at</span></p>
+              <p>Ende Töggeliturnier und Rangverkündung</p>
               <p class="noline">Bis 23.00 Uhr</p>
-              <p class="noline">gemütlicher Ausklang</p>
+              <p class="noline">Ausklang</p>
             </div>
           </div>
         </div>
-        <div class="acctitle">
-          <h2>Anreise</h2>
-          <div class="pmcontainer">
-            <div class="plus"></div>
-            <div class="minus"></div>
+        <div class="acccont">
+          <div class="acctitle"> 
+            <h2>Anreise</h2>
+            <div class="pmcontainer">
+              <div class="plus"></div>
+              <div class="minus"></div>
+            </div>
           </div>
           <div class="acclist">
             <div class="acclistc">
@@ -78,16 +129,94 @@
               <p>mit PW</p>
               <p>folgen Sie dem Zeichen &laquo;Messe Zürich&raquo; und parkieren Sie im Parkhaus Messe Zürich AG</p>
               <p class="noline gitem02">Kontaktperson bei Fragen:</p>
-              <a class="gitem02" href="mailto:karin.deutsch@funk-gruppe.ch" target="_top">karin.deutsch@funk-gruppe.ch</a>
+              <p class="noline gitem02">
+                Jennifer Höltschi <br>
+                <a class="gitem02" href="mailto: jennifer.hoeltschi@funk-gruppe.ch" target="_top"> jennifer.hoeltschi@funk-gruppe.ch</a>
+              </p>
             </div>
           </div>
         </div>
       </article>
+      
       <div id="anmeldung" class="containerform">
             <h2>Anmeldung</h2>
-            <p>Anmeldeschluss ist der 31. März 2023. <br> Die Teilnehmerzahl ist beschränkt. Die Anmeldungen werden nach Eingang berücksichtigt.</p>
+            <p>Anmeldeschluss ist der 12. Mai 2025.</p>
+            <?php require_once('form.php'); ?>
+
+            <form id="contact" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" novalidate>
+              
+              <fieldset class="checkbox">
+                <div>
+                  <input class="radio" type="radio" id="checkbox1" name="teilnahme" value="Ja, ich nehme gerne teil" tabindex="1" 
+                  <?= (isset($teilnahme) && $teilnahme == "Ja, ich nehme gerne teil") ? "checked" : "" ?>>
+                  <label for="checkbox1">Ja, ich nehme gerne teil</label>
+                </div>
+                <div>
+                  <input class="radio" type="radio" id="checkbox2" name="teilnahme" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" tabindex="2" 
+                  <?= (isset($teilnahme) && $teilnahme == "Ja, ich nehme gerne teil und mache am Töggeliturnier mit") ? "checked" : "" ?>>
+                  <label for="checkbox2">Ja, ich nehme gerne teil und mache am Töggeliturnier mit</label>
+                </div>
+                <div>
+                  <input class="radio" type="radio" id="checkbox3" name="teilnahme" value="Leider bin ich verhindert" tabindex="3"
+                  <?= (isset($teilnahme) && $teilnahme == "Leider bin ich verhindert") ? "checked" : "" ?>>
+                  <label for="checkbox3">Leider bin ich verhindert</label>
+                </div>
+                <span class="error"><?= isset($errors["teilnahme"]) ? $errors["teilnahme"] : $teilnahme_error ?></span>
+              </fieldset>
+
+              <fieldset>
+                <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= htmlspecialchars($vorname) ?>" tabindex="5">
+                <span class="error"><?= isset($errors["vorname"]) ? htmlspecialchars($errors["vorname"]) : htmlspecialchars($vorname_error) ?></span>
+              </fieldset>
+
+              <fieldset>
+                <input placeholder="Name&#42;" type="text" name="name" value="<?= htmlspecialchars($name) ?>" tabindex="6">
+                <span class="error"><?= isset($errors["name"]) ? htmlspecialchars($errors["name"]) : htmlspecialchars($name_error) ?></span>
+              </fieldset>
+
+              <fieldset>
+                <input placeholder="Firma&#42;" type="text" name="firma" value="<?= htmlspecialchars($firma) ?>" tabindex="7">
+                <span class="error"><?= isset($errors["firma"]) ? htmlspecialchars($errors["firma"]) : htmlspecialchars($firma_error) ?></span>
+              </fieldset>
+
+              <fieldset>
+                <input placeholder="Email&#42;" type="text" name="email" value="<?= htmlspecialchars($email) ?>" tabindex="8">
+                <span class="error"><?= isset($errors["email"]) ? htmlspecialchars($errors["email"]) : htmlspecialchars($email_error) ?></span>
+              </fieldset>
+
+              <fieldset>
+                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="9" rows="5"><?= htmlspecialchars($mitteilung) ?></textarea>
+                <span class="error"><?= isset($errors["mitteilung"]) ? htmlspecialchars($errors["mitteilung"]) : htmlspecialchars($mitteilung_error) ?></span>
+              </fieldset>
+
+              <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Anfrage senden</button>
+              </fieldset>
+            </form>
+
+            <div id="popup" class="popup">
+              <h1>Vielen Dank für Ihr Interesse!</h1> 
+              <p>Ihre An- oder Abmeldung haben wir erhalten. Eine persönliche Bestätigung Ihrer Anmeldung erhalten Sie in den nächsten Tagen per E-Mail.<br><br>
+              Herzliche Grüsse <br>
+              Jennifer Höltschi <br>
+              Leiterin Marketing </p>
+              <button id="closePopup">Alles klar!</button>
+            </div>
       </div> 
-    </section> -->
+    </section>
+
+    <script>
+      function showPopup() {
+          document.getElementById('popup').style.display = 'block';
+      }
+          document.getElementById('closePopup').addEventListener('click', function() {
+          document.getElementById('popup').style.display = 'none';
+      });
+
+      <?php if (isset($success)) { ?>
+          showPopup();
+      <?php } ?>
+    </script>
 
     <?php require_once 'footer.php'; ?>
     <?php require_once 'script.php'; ?>
