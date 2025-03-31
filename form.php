@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+// Nur beim ersten Laden Captcha-Werte setzen
+if (!isset($_SESSION['captcha_z1']) || !isset($_SESSION['captcha_z2'])) {
+    $zahl1 = rand(1, 5);
+    $zahl2 = rand(1, 5);
+    $_SESSION['captcha_z1'] = $zahl1;
+    $_SESSION['captcha_z2'] = $zahl2;
+    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
+}
+
 // Funktion zum Absichern von Nutzereingaben
 function sanitizeInput($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
@@ -100,31 +109,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $success = "Vielen Dank für deine Anmeldung!";
             $teilnahme = $essenspraferenz = $vorname = $name = $firma = $email = $mitteilung = "";
 
-            // CAPTCHA-Session löschen
-            unset($_SESSION['captcha_result']);
+            // CAPTCHA-Session löschen nach erfolgreicher Anmeldung
+            unset($_SESSION['captcha_z1'], $_SESSION['captcha_z2'], $_SESSION['captcha_result']);
         }
     } else {
-        // Neue Rechenaufgabe bei Fehler generieren
-        $zahl1 = rand(1, 5);
-        $zahl2 = rand(1, 5);
-        $_SESSION['captcha_z1'] = $zahl1;
-        $_SESSION['captcha_z2'] = $zahl2;
-        $_SESSION['captcha_result'] = $zahl1 + $zahl2;
-
         // Eingaben wiederherstellen bei Fehler
-        $teilnahme = isset($_POST["teilnahme"]) ? $_POST["teilnahme"] : "";
-        $vorname = isset($_POST["vorname"]) ? $_POST["vorname"] : "";
-        $name = isset($_POST["name"]) ? $_POST["name"] : "";
-        $firma = isset($_POST["firma"]) ? $_POST["firma"] : "";
-        $email = isset($_POST["email"]) ? $_POST["email"] : "";
-        $mitteilung = isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "";
+        $teilnahme = $_POST["teilnahme"] ?? "";
+        $vorname = $_POST["vorname"] ?? "";
+        $name = $_POST["name"] ?? "";
+        $firma = $_POST["firma"] ?? "";
+        $email = $_POST["email"] ?? "";
+        $mitteilung = $_POST["mitteilung"] ?? "";
     }
-} else {
-    // Erstes Laden des Formulars → Captcha generieren
-    $zahl1 = rand(1, 5);
-    $zahl2 = rand(1, 5);
-    $_SESSION['captcha_z1'] = $zahl1;
-    $_SESSION['captcha_z2'] = $zahl2;
-    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
 }
 ?>
