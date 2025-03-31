@@ -1,21 +1,6 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $errors = validateForm();
-
-    if (empty($errors)) {
-    } else {
-        $zahl1 = rand(1, 5);
-        $zahl2 = rand(1, 5);
-        $_SESSION['captcha_result'] = $zahl1 + $zahl2;
-    }
-} else {
-    $zahl1 = rand(1, 5);
-    $zahl2 = rand(1, 5);
-    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
-}
-
 // Funktion zum Absichern von Nutzereingaben
 function sanitizeInput($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
@@ -81,11 +66,11 @@ function validateForm() {
     return $errors;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = validateForm();
 
     if (empty($errors)) {
-        // Teilnahme-Ausgabe vereinfachen (optional)
+        // Teilnahme-Ausgabe vereinfachen
         if ($teilnahme == "Ja, ich nehme gerne teil") {
             $teilnahme_kurz = "Ja ohne Töggeliturnier";
         } elseif ($teilnahme == "Ja, ich nehme gerne teil und mache am Töggeliturnier mit") {
@@ -108,18 +93,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // E-Mail senden
         $headers = "From: anmeldung@funk-gruppe-event.ch";
         $to = "ivoschwizer@gmail.com";
-        // $to = "versichereranlass@funk-gruppe.ch";
         $subject = "Funk Gruppe Event - Anmeldung zum Grillabend";
         $headers .= "\r\nContent-Type: text/plain; charset=utf-8\r\n";
 
         if (mail($to, $subject, $message_body, $headers)) {
             $success = "Vielen Dank für deine Anmeldung!";
             $teilnahme = $essenspraferenz = $vorname = $name = $firma = $email = $mitteilung = "";
-        
+
             // CAPTCHA-Session löschen
             unset($_SESSION['captcha_result']);
         }
     } else {
+        // Neue Rechenaufgabe bei Fehler generieren
+        $zahl1 = rand(1, 5);
+        $zahl2 = rand(1, 5);
+        $_SESSION['captcha_result'] = $zahl1 + $zahl2;
+
         // Eingaben wiederherstellen bei Fehler
         $teilnahme = isset($_POST["teilnahme"]) ? $_POST["teilnahme"] : "";
         $vorname = isset($_POST["vorname"]) ? $_POST["vorname"] : "";
@@ -128,5 +117,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = isset($_POST["email"]) ? $_POST["email"] : "";
         $mitteilung = isset($_POST["mitteilung"]) ? $_POST["mitteilung"] : "";
     }
+} else {
+    // Erstes Laden des Formulars → Captcha generieren
+    $zahl1 = rand(1, 5);
+    $zahl2 = rand(1, 5);
+    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
 }
 ?>
