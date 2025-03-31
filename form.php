@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if ($_SERVER["REQUEST_METHOD"] != "POST" || !empty($errors)) {
+    $zahl1 = rand(1, 5);
+    $zahl2 = rand(1, 5);
+    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
+}
+
 // Funktion zum Absichern von Nutzereingaben
 function sanitizeInput($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');

@@ -193,17 +193,9 @@ Version 2.0 - 27.03.2025
                 <span class="error"><?= isset($errors["mitteilung"]) ? htmlspecialchars($errors["mitteilung"]) : htmlspecialchars($mitteilung_error) ?></span>
               </fieldset>
 
-              <?php
-                if ($_SERVER["REQUEST_METHOD"] != "POST" || !empty($errors)) {
-                    $zahl1 = rand(1, 5);
-                    $zahl2 = rand(1, 5);
-                    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
-                }
-              ?>
-
               <fieldset>
                 <label for="captcha">Sicherheitsfrage: Was ist <?= $zahl1 ?> + <?= $zahl2 ?>?</label>
-                <input type="text" name="captcha" id="captcha" required>
+                <input type="text" name="captcha" id="captcha" required tabindex="10">
                 <span class="error"><?= isset($errors["captcha"]) ? htmlspecialchars($errors["captcha"]) : "" ?></span>
               </fieldset>
 
