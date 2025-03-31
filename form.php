@@ -1,7 +1,16 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] != "POST" || !empty($errors)) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $errors = validateForm();
+
+    if (empty($errors)) {
+    } else {
+        $zahl1 = rand(1, 5);
+        $zahl2 = rand(1, 5);
+        $_SESSION['captcha_result'] = $zahl1 + $zahl2;
+    }
+} else {
     $zahl1 = rand(1, 5);
     $zahl2 = rand(1, 5);
     $_SESSION['captcha_result'] = $zahl1 + $zahl2;
