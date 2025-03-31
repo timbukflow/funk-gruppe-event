@@ -194,7 +194,7 @@ Version 2.0 - 27.03.2025
               </fieldset>
 
               <fieldset>
-                <label for="captcha">Sicherheitsfrage: Was ist <?= $zahl1 ?> + <?= $zahl2 ?>?</label>
+                <label for="captcha">Sicherheitsfrage: Was ist <?= $_SESSION['captcha_z1'] ?? '?' ?> + <?= $_SESSION['captcha_z2'] ?? '?' ?>?</label>
                 <input type="text" name="captcha" id="captcha" required tabindex="10">
                 <span class="error"><?= isset($errors["captcha"]) ? htmlspecialchars($errors["captcha"]) : "" ?></span>
               </fieldset>

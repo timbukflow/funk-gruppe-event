@@ -107,6 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Neue Rechenaufgabe bei Fehler generieren
         $zahl1 = rand(1, 5);
         $zahl2 = rand(1, 5);
+        $_SESSION['captcha_z1'] = $zahl1;
+        $_SESSION['captcha_z2'] = $zahl2;
         $_SESSION['captcha_result'] = $zahl1 + $zahl2;
 
         // Eingaben wiederherstellen bei Fehler
@@ -121,6 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Erstes Laden des Formulars → Captcha generieren
     $zahl1 = rand(1, 5);
     $zahl2 = rand(1, 5);
+    $_SESSION['captcha_z1'] = $zahl1;
+    $_SESSION['captcha_z2'] = $zahl2;
     $_SESSION['captcha_result'] = $zahl1 + $zahl2;
 }
 ?>
