@@ -1,15 +1,4 @@
 <?php
-session_start();
-
-// Nur beim ersten Laden Captcha-Werte setzen
-if (!isset($_SESSION['captcha_z1']) || !isset($_SESSION['captcha_z2'])) {
-    $zahl1 = rand(1, 5);
-    $zahl2 = rand(1, 5);
-    $_SESSION['captcha_z1'] = $zahl1;
-    $_SESSION['captcha_z2'] = $zahl2;
-    $_SESSION['captcha_result'] = $zahl1 + $zahl2;
-}
-
 // Funktion zum Absichern von Nutzereingaben
 function sanitizeInput($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
@@ -65,21 +54,21 @@ function validateForm() {
         $mitteilung = sanitizeInput($_POST["mitteilung"]);
     }
 
-    // Rechenaufgabe validieren
+    // Rechenaufgabe prüfen (feste Aufgabe: 3 + 4 = 7)
     if (!isset($_POST["captcha"]) || trim($_POST["captcha"]) === "") {
         $errors["captcha"] = "Bitte beantworten Sie die Rechenfrage.";
-    } elseif (!isset($_SESSION["captcha_result"]) || intval($_POST["captcha"]) !== $_SESSION["captcha_result"]) {
+    } elseif (intval($_POST["captcha"]) !== 7) {
         $errors["captcha"] = "Die Antwort auf die Rechenfrage ist nicht korrekt.";
     }
 
     return $errors;
 }
 
+// Formularverarbeitung
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = validateForm();
 
     if (empty($errors)) {
-        // Teilnahme-Ausgabe vereinfachen
         if ($teilnahme == "Ja, ich nehme gerne teil") {
             $teilnahme_kurz = "Ja ohne Töggeliturnier";
         } elseif ($teilnahme == "Ja, ich nehme gerne teil und mache am Töggeliturnier mit") {
@@ -90,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $teilnahme_kurz = "Unbekannt";
         }
 
-        // Nachricht zusammensetzen
+        // Nachricht erstellen
         $message_body = "Anmeldung zur Veranstaltung\n\n";
         $message_body .= "Teilnahme: " . $teilnahme_kurz . "\n";
         $message_body .= "Vorname: " . sanitizeInput($vorname) . "\n";
@@ -108,12 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (mail($to, $subject, $message_body, $headers)) {
             $success = "Vielen Dank für deine Anmeldung!";
             $teilnahme = $essenspraferenz = $vorname = $name = $firma = $email = $mitteilung = "";
-
-            // CAPTCHA-Session löschen nach erfolgreicher Anmeldung
-            unset($_SESSION['captcha_z1'], $_SESSION['captcha_z2'], $_SESSION['captcha_result']);
         }
     } else {
-        // Eingaben wiederherstellen bei Fehler
+        // Fehlerhafte Eingaben wiederherstellen
         $teilnahme = $_POST["teilnahme"] ?? "";
         $vorname = $_POST["vorname"] ?? "";
         $name = $_POST["name"] ?? "";
