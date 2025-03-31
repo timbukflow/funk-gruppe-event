@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Funktion zum Absichern von Nutzereingaben
 function sanitizeInput($data) {
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
@@ -52,6 +54,13 @@ function validateForm() {
 
     if (!empty($_POST["mitteilung"])) {
         $mitteilung = sanitizeInput($_POST["mitteilung"]);
+    }
+
+    // Rechenaufgabe validieren
+    if (!isset($_POST["captcha"]) || trim($_POST["captcha"]) === "") {
+        $errors["captcha"] = "Bitte beantworten Sie die Rechenfrage.";
+    } elseif (!isset($_SESSION["captcha_result"]) || intval($_POST["captcha"]) !== $_SESSION["captcha_result"]) {
+        $errors["captcha"] = "Die Antwort auf die Rechenfrage ist nicht korrekt.";
     }
 
     return $errors;
