@@ -92,13 +92,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // E-Mail senden
         $headers = "From: anmeldung@funk-gruppe-event.ch";
-        $to = "versichereranlass@funk-gruppe.ch";
+        $to = "ivoschwizer@gmail.com";
+        // $to = "versichereranlass@funk-gruppe.ch";
         $subject = "Funk Gruppe Event - Anmeldung zum Grillabend";
         $headers .= "\r\nContent-Type: text/plain; charset=utf-8\r\n";
 
         if (mail($to, $subject, $message_body, $headers)) {
             $success = "Vielen Dank für deine Anmeldung!";
             $teilnahme = $essenspraferenz = $vorname = $name = $firma = $email = $mitteilung = "";
+        
+            // CAPTCHA-Session löschen
+            unset($_SESSION['captcha_result']);
         }
     } else {
         // Eingaben wiederherstellen bei Fehler
