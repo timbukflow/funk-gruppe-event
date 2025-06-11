@@ -58,16 +58,16 @@ Version 2.0 - 27.03.2025
 
 <body>
     <header>
-        <div class="asheader"><h3>Anmeldeschluss ist der 12. Mai 2025.</h3> </div>
+        <!-- <div class="asheader"><h3>Anmeldeschluss ist der 12. Mai 2025.</h3> </div> -->
         <div class="event-title">
           <h1>Einladung zum Grillabend mit Töggeliturnier</span></h1>
           <h2>Gemeinsam geniessen & mitfiebern!</span></h2>
-          <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button>
+          <!-- <button class="homebutton"> <a class="goto" href="#anmeldung">zur Anmeldung</a> </button> -->
           <div class="grill"><img src="./img/funk-grill.svg" alt="funk-grill"></div>
           <div class="funk-logo"><img src="./img/funk-logo.svg" alt="funk-logo"></div>
         </div>
     </header>
-    <section>
+    <section class="no-form">
       <article class="intro">
         <h1>Geschätzte Geschäftspartner</h1>
         <p>
@@ -114,7 +114,7 @@ Version 2.0 - 27.03.2025
             </div>
           </div>
         </div>
-        <div class="acccont">
+        <div class="acccont no-form">
           <div class="acctitle"> 
             <h2>Anreise</h2>
             <div class="pmcontainer">
@@ -141,98 +141,7 @@ Version 2.0 - 27.03.2025
           </div>
         </div>
       </article>
-      
-      <div id="anmeldung" class="containerform">
-            <h2>Anmeldung</h2>
-            <p>Anmeldeschluss ist der 12. Mai 2025.</p>
-            <?php require_once('form.php'); ?>
-
-            <form id="contact" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" novalidate>
-              
-              <fieldset class="checkbox">
-                <div>
-                  <input class="radio" type="radio" id="checkbox1" name="teilnahme" value="Ja, ich nehme gerne teil" tabindex="1" 
-                  <?= (isset($teilnahme) && $teilnahme == "Ja, ich nehme gerne teil") ? "checked" : "" ?>>
-                  <label for="checkbox1">Ja, ich nehme gerne teil</label>
-                </div>
-                <div>
-                  <input class="radio" type="radio" id="checkbox2" name="teilnahme" value="Ja, ich nehme gerne teil und mache am Töggeliturnier mit" tabindex="2" 
-                  <?= (isset($teilnahme) && $teilnahme == "Ja, ich nehme gerne teil und mache am Töggeliturnier mit") ? "checked" : "" ?>>
-                  <label for="checkbox2">Ja, ich nehme gerne teil und mache am Töggeliturnier mit</label>
-                </div>
-                <div>
-                  <input class="radio" type="radio" id="checkbox3" name="teilnahme" value="Leider bin ich verhindert" tabindex="3"
-                  <?= (isset($teilnahme) && $teilnahme == "Leider bin ich verhindert") ? "checked" : "" ?>>
-                  <label for="checkbox3">Leider bin ich verhindert</label>
-                </div>
-                <span class="error"><?= isset($errors["teilnahme"]) ? $errors["teilnahme"] : $teilnahme_error ?></span>
-              </fieldset>
-
-              <fieldset>
-                <input placeholder="Vorname&#42;" type="text" name="vorname" value="<?= htmlspecialchars($vorname) ?>" tabindex="5">
-                <span class="error"><?= isset($errors["vorname"]) ? htmlspecialchars($errors["vorname"]) : htmlspecialchars($vorname_error) ?></span>
-              </fieldset>
-
-              <fieldset>
-                <input placeholder="Name&#42;" type="text" name="name" value="<?= htmlspecialchars($name) ?>" tabindex="6">
-                <span class="error"><?= isset($errors["name"]) ? htmlspecialchars($errors["name"]) : htmlspecialchars($name_error) ?></span>
-              </fieldset>
-
-              <fieldset>
-                <input placeholder="Firma&#42;" type="text" name="firma" value="<?= htmlspecialchars($firma) ?>" tabindex="7">
-                <span class="error"><?= isset($errors["firma"]) ? htmlspecialchars($errors["firma"]) : htmlspecialchars($firma_error) ?></span>
-              </fieldset>
-
-              <fieldset>
-                <input placeholder="Email&#42;" type="text" name="email" value="<?= htmlspecialchars($email) ?>" tabindex="8">
-                <span class="error"><?= isset($errors["email"]) ? htmlspecialchars($errors["email"]) : htmlspecialchars($email_error) ?></span>
-              </fieldset>
-
-              <fieldset>
-                <textarea placeholder="Mitteilung" name="mitteilung" tabindex="9" rows="5"><?= htmlspecialchars($mitteilung) ?></textarea>
-                <span class="error"><?= isset($errors["mitteilung"]) ? htmlspecialchars($errors["mitteilung"]) : htmlspecialchars($mitteilung_error) ?></span>
-              </fieldset>
-
-              <fieldset>
-                <label for="captcha">Sicherheitsfrage: Was ist 3 + 4?</label>
-                <input type="text" name="captcha" id="captcha" required tabindex="10">
-                <span class="error"><?= isset($errors["captcha"]) ? htmlspecialchars($errors["captcha"]) : "" ?></span>
-              </fieldset>
-
-              <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Anfrage senden</button>
-              </fieldset>
-            </form>
-
-            <div id="popup" class="popup">
-              <h1>Vielen Dank für Ihr Interesse!</h1> 
-              <p>Ihre An- oder Abmeldung haben wir erhalten. Eine persönliche Bestätigung Ihrer Anmeldung erhalten Sie in den nächsten Tagen per E-Mail.<br><br>
-              Herzliche Grüsse <br>
-              Jennifer Höltschi <br>
-              Leiterin Marketing </p>
-              <button id="closePopup">Alles klar!</button>
-            </div>
-      </div> 
     </section>
-
-    <script>
-      function showPopup() {
-          document.getElementById('popup').style.display = 'block';
-      }
-
-      document.getElementById('closePopup').addEventListener('click', function() {
-          document.getElementById('popup').style.display = 'none';
-      });
-
-      <?php if (isset($success)) { ?>
-        window.location.hash = '#anmeldung';
-        showPopup();
-      <?php } ?>
-
-      <?php if (!empty($errors)) { ?>
-        window.location.hash = '#anmeldung';
-      <?php } ?>
-    </script>
 
     <?php require_once 'footer.php'; ?>
     <?php require_once 'script.php'; ?>

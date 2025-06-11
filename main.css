@@ -193,6 +193,10 @@ header {
   border-bottom: none;
 }
 
+.acccont.no-form {
+  border-bottom: 1px solid var(--funkgreen);
+}
+
 /*----------------------------------
     Contactform
 -----------------------------------*/
@@ -348,6 +352,10 @@ textarea:focus {
 .homebutton a {
   text-decoration: none;
   color: white;
+}
+
+.no-form {
+  margin-bottom: 50px;
 }
 
 
