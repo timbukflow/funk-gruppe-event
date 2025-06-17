@@ -422,5 +422,5 @@ footer  {
 }
 
 @media only screen and (max-width: 600px) {
-  footer {gap: 10px;align-items: flex-start;flex-direction: column; margin-top: 10px;}
+  footer {gap: 10px;align-items: flex-start;flex-direction: column;}
 }
