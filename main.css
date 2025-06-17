@@ -416,6 +416,9 @@ footer  {
   .noline {padding-bottom: 0;}
   .footer01, .footer02 {position: relative; left: auto; right: auto; bottom: auto; padding-top: 15px;}
   .popup {left: 8%; transform: translate(-4%, -50%);}
+
+  .event-title h1 {top: 30px;width: 90%;}
+  .event-title {padding: 0;}
 }
 
 @media only screen and (max-width: 600px) {
