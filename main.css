@@ -67,8 +67,7 @@ article{
 header {
   width: 100%;
   height: 100vh;
-  background: url(img/funk-background.svg) no-repeat center center; 
-  background-size: cover;
+  background-color: #e6f3fe;
   position: relative;
 }
 
@@ -95,14 +94,16 @@ header {
 
 .event-title {
   margin: 0 auto;
-  padding: 50px 0 20px;
-  width: 800px;
+  padding: 50px;
 }
 
 .event-title h1 {
   font-size: 40px;
   line-height: 1.2;
   color: var(--funkblue);
+  position: absolute;
+  top: calc(50% - 120px);
+  width: 40%;
 }
 
 .event-title h2 {
